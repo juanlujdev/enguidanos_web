@@ -759,4 +759,4 @@ function PageHeroMedia({ img, alt, placeholder, position, children }) {
   );
 }
 
-export { Icon, Header, Hero, Marquee, Highlights, CabrielFeature, InteractiveMap, AgendaPreview, Gallery, News, Visit, Footer };
+export { Icon, Header, Hero, Marquee, Highlights, CabrielFeature, PageHeroMedia, InteractiveMap, AgendaPreview, Gallery, News, Visit, Footer };

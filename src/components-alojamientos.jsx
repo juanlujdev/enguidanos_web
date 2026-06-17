@@ -1,5 +1,6 @@
 import React from 'react'
 const { useState } = React;
+import { PageHeroMedia } from './components-shared.jsx'
 // =============== ALOJAMIENTOS PAGE ===============
 
 const ALOJAMIENTOS = [

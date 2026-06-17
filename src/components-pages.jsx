@@ -6,7 +6,7 @@ import {
   NATURALEZA, NATURALEZA_CATS, NATURALEZA_DESTACADO, NATURALEZA_RIOS, NATURALEZA_FUENTES, RUTAS_INFO
 } from './data.jsx'
 import { HISTORIA, HISTORIA_META } from './data-historia.jsx'
-import { Icon, Header, Hero, Marquee, Highlights, CabrielFeature, InteractiveMap, AgendaPreview, Gallery, News, Visit, Footer } from './components-shared.jsx'
+import { Icon, PageHeroMedia } from './components-shared.jsx'
 
 // Bloque de imagen histórica (hueco para foto de archivo en B/N o sepia)
 function HistoriaFoto({ img }) {
