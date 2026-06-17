@@ -1,0 +1,7 @@
+[
+  { "id": "cabriel",   "name": "Río Cabriel",   "kind": "río", "img": "assets/rio-cabriel.webp" },
+  { "id": "guadazaon", "name": "Río Guadazaón",  "kind": "río", "img": "assets/rio-guadazaon.webp" },
+  { "id": "narboneta", "name": "Río Narboneta",  "kind": "río", "img": "assets/rio-narboneta.webp" },
+  { "id": "san-martin","name": "Río San Martín", "kind": "río", "img": "assets/rio-san-martin.webp" },
+  { "id": "mira",      "name": "Río Mira",       "kind": "río", "img": "assets/rio-mira.webp" }
+]

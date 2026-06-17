@@ -1,0 +1,6 @@
+{
+  "agua":     { "label": "Parajes de agua",      "color": { "a": "#5a8aa3", "b": "#2d5a72" } },
+  "hoces":    { "label": "Hoces y cañones",       "color": { "a": "#9c8a6a", "b": "#5a4f3a" } },
+  "embalses": { "label": "Embalses",              "color": { "a": "#4a7a8e", "b": "#243f52" } },
+  "enclaves": { "label": "Enclaves singulares",   "color": { "a": "#7a8a5e", "b": "#3f4727" } }
+}

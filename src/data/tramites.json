@@ -1,0 +1,11 @@
+[
+  { "num": "01", "slug": "corporacion",              "title": "Corporación Municipal",       "desc": "Composición del consistorio: alcaldía, concejalías y grupos políticos." },
+  { "num": "02", "slug": "plenos",                   "title": "Plenos",                      "desc": "Convocatorias, órdenes del día y actas de las sesiones plenarias." },
+  { "num": "03", "slug": "ordenanzas-municipales",   "title": "Ordenanzas Municipales",      "desc": "Normativa y reglamentos que regulan la vida del municipio." },
+  { "num": "04", "slug": "ordenanzas-fiscales",      "title": "Ordenanzas Fiscales",         "desc": "Tasas, impuestos y precios públicos en vigor cada ejercicio." },
+  { "num": "05", "slug": "perfil-contratante",       "title": "Perfil del Contratante",      "desc": "Licitaciones, contratos y procedimientos de contratación pública." },
+  { "num": "06", "slug": "bandos",                   "title": "Bandos",                      "desc": "Avisos y comunicaciones oficiales de la Alcaldía a los vecinos." },
+  { "num": "07", "slug": "sostenibilidad",           "title": "Sostenibilidad",              "desc": "Compromiso con el desarrollo sostenible y el medio ambiente." },
+  { "num": "08", "slug": "administracion-electronica","title": "Administración Electrónica", "desc": "Sede electrónica para tramitar en línea con certificado o Cl@ve.", "ext": "https://enguidanos.sedelectronica.es/info.0" },
+  { "num": "09", "slug": "tramites-formularios",     "title": "Trámites y Formularios",      "desc": "Modelos de solicitud e instancias en PDF para descargar, rellenar y presentar." }
+]

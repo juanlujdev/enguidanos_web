@@ -1,0 +1,7 @@
+[
+  { "id": "san-blas", "name": "Fuente de San Blas", "kind": "fuente", "img": "assets/fuente-san-blas.webp" },
+  { "id": "carica",   "name": "Fuente Carica",       "kind": "fuente" },
+  { "id": "el-pago",  "name": "Fuente El Pago",      "kind": "fuente", "img": "assets/fuente-el-pago.webp" },
+  { "id": "donato",   "name": "Fuente Donato",       "kind": "fuente" },
+  { "id": "teo",      "name": "Fuente de Teo",       "kind": "fuente" }
+]

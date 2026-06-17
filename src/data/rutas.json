@@ -1,0 +1,8 @@
+{
+  "PR CU-50":  { "code": "PR CU-50",  "name": "Sendero de la Hoz del Agua y Hoz Cerrada", "logo": "assets/rutas/logos/mini/pr-cu-50.webp",  "pdf": "assets/senderos/pr-cu-50.pdf" },
+  "PR CU-53":  { "code": "PR CU-53",  "name": "Sendero de Las Chorreras",                 "logo": "assets/rutas/logos/mini/pr-cu-53.webp",  "pdf": "assets/senderos/pr-cu-53.pdf" },
+  "PR CU-54":  { "code": "PR CU-54",  "name": "Sendero de los Cuatro Ríos",               "logo": "assets/rutas/logos/mini/pr-cu-54.webp",  "pdf": "assets/senderos/pr-cu-54.pdf" },
+  "GR 64":     { "code": "GR 64",     "name": "De Enguídanos a Mira",                     "logo": "assets/rutas/logos/mini/gr-64.webp",     "pdf": "assets/senderos/gr-64.pdf" },
+  "GR 66":     { "code": "GR 66",     "name": "Valle del Cabriel · Víllora – Enguídanos",  "logo": "assets/rutas/logos/mini/gr-66.webp",     "pdf": "assets/senderos/gr-66.pdf" },
+  "BTT CU-02": { "code": "BTT CU-02", "name": "Ruta de bicicleta de montaña",             "logo": "assets/rutas/logos/mini/btt-cu-02.webp", "pdf": "assets/senderos/btt-cu-02.pdf" }
+}

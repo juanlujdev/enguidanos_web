@@ -1,0 +1,7 @@
+{
+  "arqueologia": { "label": "Arqueología", "color": { "a": "#9c8a5a", "b": "#5a4f2a" } },
+  "monumentos":  { "label": "Monumentos", "color": { "a": "#9c6b3a", "b": "#5a3d1f" } },
+  "industrial":  { "label": "Hidráulico e industrial", "color": { "a": "#5a7a8e", "b": "#2d4a5a" } },
+  "miradores":   { "label": "Miradores", "color": { "a": "#7ba3bc", "b": "#3a6a7a" } },
+  "heraldica":   { "label": "Heráldica", "color": { "a": "#8a7a6a", "b": "#5a4a3f" } }
+}

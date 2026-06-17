@@ -1,0 +1,162 @@
+{
+  "destacado": {
+    "id": "chorreras", "cat": "agua",
+    "title": "Las Chorreras", "titleEm": "del Cabriel",
+    "badge": "Monumento Natural · JCCM",
+    "img": "assets/chorreras.webp",
+    "rutas": ["PR CU-53", "GR 66", "BTT CU-02"],
+    "excerpt": "El río Cabriel labra la roca caliza en cascadas, balsas y saltos de agua turquesa a cinco kilómetros del pueblo.",
+    "web": { "label": "chorrerasdelcabriel.es", "href": "https://www.chorrerasdelcabriel.es" },
+    "desc": [
+      "En los alrededores del pueblo de Enguídanos, a cinco kilómetros del centro urbano del municipio, nos encontramos este paraje natural declarado Monumento Natural por la Junta de Comunidades de Castilla-La Mancha.",
+      "A destacar de las Chorreras del Cabriel su espectacularidad y la belleza del paisaje por donde discurre el río Cabriel. Pero los amantes de la naturaleza se darán cuenta de que no sólo tiene una belleza estética: en este tramo, el río ha excavado una prolongada pendiente en la roca caliza, ocasionando un paraje con cascadas, corrientes, balsas, rápidos y saltos de agua de color turquesa.",
+      "A esto se añade que el río Cabriel es uno de los ríos mejor conservados de Europa, lo que suma a la belleza natural que ya posee el lugar."
+    ],
+    "meta": [{ "k": "Figura", "v": "Monumento Natural" }, { "k": "Distancia", "v": "5 km del pueblo" }, { "k": "Río", "v": "Cabriel" }]
+  },
+  "items": [
+    {
+      "id": "hoz-agua", "cat": "hoces",
+      "title": "Hoz", "titleEm": "del Agua",
+      "img": "assets/hoz-del-agua-v2.webp",
+      "rutas": ["PR CU-50"],
+      "excerpt": "Cañón de más de 3 km salpicado de fuentes y manantiales que afloran en los barrancos.",
+      "desc": [
+        "En esta hoz se encuentran abundantes fuentes y manantiales, que afloran en las grietas de los barrancos —ejemplos son Las Fuentecillas, la Fuente Marcial o el Manantial de Villaescusa—. También hay abundantes pinares y un molinillo en el embalse para el riego, de grandes dimensiones.",
+        "Esta hoz tiene algo más de 3 km de longitud, con una pendiente interior oeste-este que va de los 950 a los 750 metros. Para los amantes de la geología, en su conexión con el río Cabriel se pueden contemplar escarpadas paredes de roca caliza y aglomerados de diferente dureza que conforman un paisaje quebrado."
+      ],
+      "meta": [{ "k": "Longitud", "v": "≈ 3 km" }, { "k": "Altitud", "v": "950–750 m" }]
+    },
+    {
+      "id": "hoz-rio-mira", "cat": "hoces",
+      "title": "Hoz", "titleEm": "del Río Mira",
+      "img": "assets/naturaleza/hoz-rio-mira-2-o.webp",
+      "rutas": ["PR CU-54", "GR 64", "BTT CU-02"],
+      "excerpt": "Un pequeño cañón fluvial de paredes verticales en la desembocadura del embalse de Contreras.",
+      "desc": [
+        "En la desembocadura del embalse de Contreras, esta hoz forma uno de los parajes más bonitos de Enguídanos. Se trata de un pequeño cañón fluvial horadado en las paredes verticales de piedra, residiendo su espectacularidad en la altura de éstas."
+      ]
+    },
+    {
+      "id": "hoz-cerrada", "cat": "hoces",
+      "title": "Hoz", "titleEm": "Cerrada",
+      "img": "assets/naturaleza/hoz-cerrada-o.webp",
+      "rutas": ["PR CU-50"],
+      "excerpt": "Interior rectilíneo y laterales escarpados de hasta 200 m, ya sin curso de agua superficial.",
+      "desc": [
+        "La peculiaridad de esta hoz radica en el contraste de la forma rectilínea de su interior con lo escarpado de sus laterales, con paredes de hasta 200 metros de altura, coronadas por farallones rocosos. Su belleza es concentrada, ya que sólo tiene 2 km de longitud.",
+        "Por este paraje ya no fluye el agua: se filtra hacia los arroyos y ríos subterráneos, aflorando al exterior en forma de manantial."
+      ],
+      "meta": [{ "k": "Longitud", "v": "≈ 2 km" }, { "k": "Paredes", "v": "Hasta 200 m" }]
+    },
+    {
+      "id": "hoz-san-martin", "cat": "hoces",
+      "title": "Hoz", "titleEm": "del Río San Martín",
+      "img": "assets/naturaleza/hoz-san-martin-o.webp",
+      "rutas": ["PR CU-54"],
+      "excerpt": "Profunda hoz con cuchillos rocosos en el límite con Víllora, Lugar de Interés Geológico.",
+      "desc": [
+        "El río San Martín se encaja en los límites de Enguídanos con Víllora en una profunda hoz, con cuchillos de inigualable belleza, declarada Lugar de Interés Geológico."
+      ],
+      "meta": [{ "k": "Figura", "v": "Lugar de Interés Geológico" }]
+    },
+    {
+      "id": "perejil", "cat": "hoces",
+      "title": "El", "titleEm": "Perejil",
+      "img": "assets/naturaleza/perejil-o.webp",
+      "rutas": ["PR CU-54", "BTT CU-02"],
+      "excerpt": "Donde el Cabriel hace frontera natural entre Enguídanos y La Pesquera, con vistas abismales.",
+      "desc": [
+        "Este paraje se encuentra donde el río Cabriel hace de frontera natural entre los pueblos de Enguídanos y La Pesquera. Desde aquí se puede observar el avance del río hacia el pantano de Contreras, con la característica de que la vista es impresionante, ya que en este tramo el cauce del río alcanza unas proporciones abismales."
+      ]
+    },
+    {
+      "id": "playeta-lastra", "cat": "agua",
+      "title": "La Playeta", "titleEm": "y La Lastra",
+      "img": "assets/playeta.webp",
+      "rutas": ["GR 66", "BTT CU-02"],
+      "excerpt": "Una represa bien conservada sobre el Cabriel forma una pequeña playa de río junto al pueblo.",
+      "desc": [
+        "Cerca del casco urbano de Enguídanos hay una represa abandonada sobre el río Cabriel muy bien conservada. Esta obra de ingeniería provoca, con su salida de agua, un ensanche que en su orilla forma una pequeña playa, aprovechada por vecinos del pueblo y visitantes para comer y refrescarse."
+      ]
+    },
+    {
+      "id": "salobral", "cat": "agua",
+      "title": "El", "titleEm": "Salobral",
+      "img": "assets/naturaleza/salobral-o.webp",
+      "rutas": ["PR CU-54", "GR 64"],
+      "excerpt": "Antiguo balneario junto al Cerro Cabeza Moya, con un manantial de agua salada en rambla salina.",
+      "desc": [
+        "Ubicado junto al Cerro Cabeza Moya (yacimiento arqueológico celtíbero), se encuentran estos baños, utilizados antiguamente como balneario. Hay un manantial de agua salada en una rambla salina, lugar de importancia natural ya que en él crecen especies vegetales muy características."
+      ]
+    },
+    {
+      "id": "embalse-batanejo", "cat": "embalses",
+      "title": "Embalse", "titleEm": "del Batanejo",
+      "img": "assets/naturaleza/embalse-batanejo-o.webp",
+      "excerpt": "Presa de sillería escalonada sobre el Guadazaón, en una zona LIC de gran serenidad.",
+      "desc": [
+        "La carretera que se dirige a Cardenete cruza la presa que, sobre el río Guadazaón, está construida en piedra de sillería con un diseño de contención escalonada entre los ojos de la propia presa. Es un buen ejemplo de conjunción entre la naturaleza y la mano del hombre.",
+        "El río Guadazaón, situado en zona LIC, presenta a su paso un paisaje de gran belleza y serenidad."
+      ],
+      "meta": [{ "k": "Río", "v": "Guadazaón" }, { "k": "Protección", "v": "Zona LIC" }]
+    },
+    {
+      "id": "embalse-contreras", "cat": "embalses",
+      "title": "Embalse", "titleEm": "de Contreras",
+      "img": "assets/naturaleza/embalse-contreras-o.webp",
+      "rutas": ["PR CU-54"],
+      "excerpt": "Gran embalse de 1972 en la confluencia del Cabriel y el Mira, con presa de 129 metros.",
+      "desc": [
+        "Situado entre los municipios de Villalgordo del Cabriel (Valencia) y La Pesquera, Mira, Enguídanos y Minglanilla (Cuenca), se construyó en 1972 en la confluencia de los ríos Cabriel y Mira.",
+        "Tiene una superficie de 2.710 ha, con una capacidad máxima de 943 hm³ y una altura de presa de 129 metros. Se usa para la producción de energía y para abastecer de agua al Canal Júcar-Turia, que suministra agua potable a la ciudad de Valencia."
+      ],
+      "meta": [{ "k": "Año", "v": "1972" }, { "k": "Superficie", "v": "2.710 ha" }, { "k": "Capacidad", "v": "943 hm³" }, { "k": "Presa", "v": "129 m" }]
+    },
+    {
+      "id": "embalse-villora", "cat": "embalses",
+      "title": "Embalse", "titleEm": "de Víllora",
+      "img": "assets/naturaleza/embalse-villora-o.webp",
+      "rutas": ["GR 66"],
+      "excerpt": "Pequeño represamiento del Cabriel que alimenta la central del Salto Lucas de Urquijo.",
+      "desc": [
+        "Con apenas un represamiento de 1 hm³, recoge las aguas del río Cabriel para servir, por un lado, de aprovechamiento hidroeléctrico a la Central del Salto Lucas de Urquijo y, por otro, mediante un canal con trampillas por las que el agua cae al Cabriel, que va cogiendo caudal para descolgarse después por el paraje de Las Chorreras."
+      ],
+      "meta": [{ "k": "Capacidad", "v": "≈ 1 hm³" }]
+    },
+    {
+      "id": "charandel", "cat": "enclaves",
+      "title": "El", "titleEm": "Charandel",
+      "img": "assets/patrimonio/opt/charandel.webp",
+      "rutas": ["PR CU-54", "BTT CU-02"],
+      "excerpt": "Aldea de hortelanos que aprovecha el agua del río Mira hasta para generar su propia electricidad.",
+      "desc": [
+        "Aldea de hortelanos por la que pasa una canalización artificial que aprovecha el agua del río Mira para darle un uso doméstico y de regadío, así como para producir la energía eléctrica de la propia aldea.",
+        "Hay instalada una minicentral, con una antigüedad aproximada de 50 años, movida por el cauce artificial antes de ser devuelta al río Narboneta en una caída de unos 4 metros."
+      ],
+      "meta": [{ "k": "Río", "v": "Mira" }, { "k": "Salto", "v": "≈ 4 m" }]
+    },
+    {
+      "id": "puente-cortina", "cat": "enclaves",
+      "title": "Puente de la Cortina", "titleEm": "· Viaducto Torres Quevedo",
+      "img": "assets/naturaleza/puente-cortina-o.webp",
+      "excerpt": "Viaducto ferroviario del siglo XX, de 21 ojos y casi un kilómetro de longitud.",
+      "desc": [
+        "Junto a la vieja y abandonada estación de tren de Enguídanos, en el límite territorial con los pueblos de Narboneta y Mira, se alza esta construcción de ingeniería del siglo XX, de extraordinaria belleza plástica y espectacularidad.",
+        "Es un puente de la línea de ferrocarril Madrid-Valencia que cuenta con 21 ojos y una longitud de casi 1 km. Su belleza paisajística y sus sorprendentes proporciones lo transforman en un recurso patrimonial digno de ser visitado y contemplado."
+      ],
+      "meta": [{ "k": "Época", "v": "Siglo XX" }, { "k": "Ojos", "v": "21" }, { "k": "Longitud", "v": "≈ 1 km" }]
+    },
+    {
+      "id": "tunel-yeso", "cat": "enclaves",
+      "title": "Túnel", "titleEm": "de Yeso",
+      "img": "assets/naturaleza/tunel-yeso-o.webp",
+      "rutas": ["PR CU-54"],
+      "excerpt": "Galería horadada en la roca de yeso en el antiguo camino a Camporrobles, junto al Puente de Hierro.",
+      "desc": [
+        "Curioso túnel excavado en la roca de yeso a lo largo del antiguo camino que conducía a Camporrobles, en dirección al Cerro Cabeza Moya. Se accede a él una vez cruzado el Puente de Hierro, junto a los restos del antiguo Puente Romano sobre el río Cabriel.",
+        "Horadado en la piedra para salvar el paso, sus paredes blanquecinas conservan las marcas del trabajo y la luz del extremo opuesto dibuja su característica boca de salida, en un juego de sombras que sorprende a quien lo recorre."
+      ]
+    }
+  ]
+}

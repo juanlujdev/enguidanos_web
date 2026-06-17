@@ -1,0 +1,137 @@
+{
+  "corporacion": {
+    "title": "Corporación Municipal",
+    "intro": "Corporación municipal de Enguídanos tras las elecciones del 26 de mayo de 2019.",
+    "alcalde": { "nombre": "Sergio de Fez Cerezuela", "cargo": "Alcalde-Presidente", "partido": "PSOE", "foto": "assets/alcalde-sergio-de-fez.webp" },
+    "concejales": [
+      { "nombre": "Mª Rosario Cerdán Pérez",  "cargo": "1ª Teniente de Alcalde · Concejala", "partido": "PSOE" },
+      { "nombre": "Vicente Jiménez Luján",     "cargo": "Concejal",                           "partido": "PSOE" },
+      { "nombre": "Mª Jesús López Luján",      "cargo": "Concejala",                          "partido": "PSOE" },
+      { "nombre": "Daniela Martínez De Fez",   "cargo": "Concejala",                          "partido": "PSOE" },
+      { "nombre": "Jesús Sáiz Plá",            "cargo": "Concejal",                           "partido": "PP" }
+    ]
+  },
+  "plenos": {
+    "title": "Plenos",
+    "intro": "Actas de las sesiones plenarias del Ayuntamiento de Enguídanos. Selecciona un acta para consultarla o descargar el documento oficial en PDF.",
+    "nota": "En 2017, 2018 y 2019 no constan actas publicadas en el archivo municipal.",
+    "years": [
+      {
+        "year": "2016",
+        "actas": [
+          { "fecha": "31 de marzo de 2016",  "pdf": "assets/ayuntamiento/plenos/acta-31-marzo-2016.pdf" },
+          { "fecha": "28 de enero de 2016",  "pdf": "assets/ayuntamiento/plenos/acta-28-enero-2016.pdf" }
+        ]
+      },
+      {
+        "year": "2015",
+        "actas": [
+          { "fecha": "23 de noviembre de 2015",  "pdf": "assets/ayuntamiento/plenos/acta-23-noviembre-2015.pdf" },
+          { "fecha": "28 de septiembre de 2015", "pdf": "assets/ayuntamiento/plenos/acta-28-septiembre-2015.pdf" },
+          { "fecha": "16 de julio de 2015", "sesion": "Sesión 07/2015", "partes": [
+            { "n": 1, "pdf": "assets/ayuntamiento/plenos/pleno-16-julio-2015-parte-1.pdf" },
+            { "n": 2, "pdf": "assets/ayuntamiento/plenos/pleno-16-julio-2015-parte-2.pdf" },
+            { "n": 3, "pdf": "assets/ayuntamiento/plenos/pleno-16-julio-2015-parte-3.pdf" }
+          ] },
+          { "fecha": "24 de junio de 2015", "sesion": "Sesión 06/2015", "partes": [
+            { "n": 1, "pdf": "assets/ayuntamiento/plenos/pleno-24-junio-2015-parte-1.pdf" },
+            { "n": 2, "pdf": "assets/ayuntamiento/plenos/pleno-24-junio-2015-parte-2.pdf" },
+            { "n": 3, "pdf": "assets/ayuntamiento/plenos/pleno-24-junio-2015-parte-3.pdf" },
+            { "n": 4, "pdf": "assets/ayuntamiento/plenos/pleno-24-junio-2015-parte-4.pdf" },
+            { "n": 5, "pdf": "assets/ayuntamiento/plenos/pleno-24-junio-2015-parte-5.pdf" },
+            { "n": 6, "pdf": "assets/ayuntamiento/plenos/pleno-24-junio-2015-parte-6.pdf" },
+            { "n": 7, "pdf": "assets/ayuntamiento/plenos/pleno-24-junio-2015-parte-7.pdf" }
+          ] }
+        ]
+      }
+    ]
+  },
+  "ordenanzas-fiscales": {
+    "title": "Ordenanzas Fiscales",
+    "intro": "Impuestos, tasas y precios públicos en vigor en el municipio. Cada ordenanza está disponible como documento oficial en PDF.",
+    "docs": [
+      { "tipo": "Impuesto", "title": "Impuesto sobre Bienes Inmuebles (IBI)",                                                     "pdf": "assets/ayuntamiento/ordenanzas-fiscales/ibi.pdf" },
+      { "tipo": "Impuesto", "title": "Impuesto sobre Vehículos de Tracción Mecánica (IVTM)",                                      "pdf": "assets/ayuntamiento/ordenanzas-fiscales/ivtm.pdf" },
+      { "tipo": "Impuesto", "title": "Impuesto sobre el Incremento de Valor de los Terrenos de Naturaleza Urbana (Plusvalía)",    "pdf": "assets/ayuntamiento/ordenanzas-fiscales/plusvalia.pdf" },
+      { "tipo": "Tasa",     "title": "Tasa por el servicio público de recogida de basuras",                                       "pdf": "assets/ayuntamiento/ordenanzas-fiscales/basura.pdf" },
+      { "tipo": "Tasa",     "title": "Tasa por el servicio público de suministro de agua potable",                                "pdf": "assets/ayuntamiento/ordenanzas-fiscales/agua-potable.pdf" },
+      { "tipo": "Tasa",     "title": "Tasa por la prestación del servicio de depuración de aguas residuales",                     "pdf": "assets/ayuntamiento/ordenanzas-fiscales/depuracion-aguas-residuales.pdf" },
+      { "tipo": "Tasa",     "title": "Tasa por la expedición de documentos administrativos",                                      "pdf": "assets/ayuntamiento/ordenanzas-fiscales/expedicion-documentos.pdf" },
+      { "tipo": "Tasa",     "title": "Tasa por la prestación del servicio de piscina municipal",                                  "pdf": "assets/ayuntamiento/ordenanzas-fiscales/tasa-piscina-municipal.pdf" }
+    ]
+  },
+  "ordenanzas-municipales": {
+    "title": "Ordenanzas Municipales",
+    "intro": "Normativa y reglamentos municipales en vigor en Enguídanos. El texto íntegro está disponible como documento oficial en PDF.",
+    "docs": [
+      { "tipo": "Ordenanza",   "title": "Ordenanza Integral Reguladora de las Actividades Económicas, Sociales y Medioambientales", "pdf": "assets/ayuntamiento/ordenanzas-municipales/ordenanza-integral.pdf" },
+      { "tipo": "Ordenanza",   "title": "Ordenanza Reguladora del Vertido de Lodos y Purines",                                      "pdf": "assets/ayuntamiento/ordenanzas-municipales/vertido-lodos-purines.pdf" },
+      { "tipo": "Ordenanza",   "title": "Ordenanza Municipal de Protección del Arbolado de Interés Local",                          "pdf": "assets/ayuntamiento/ordenanzas-municipales/arbolado-interes-local.pdf" },
+      { "tipo": "Ordenanza",   "title": "Ordenanza Municipal Reguladora del Cementerio Municipal",                                  "pdf": "assets/ayuntamiento/ordenanzas-municipales/cementerio.pdf" },
+      { "tipo": "Reglamento",  "title": "Reglamento de la Piscina Municipal",                                                       "pdf": "assets/ayuntamiento/ordenanzas-municipales/reglamento-piscina.pdf" },
+      { "tipo": "Plan",        "title": "Plan de Autocontrol de la Piscina Municipal",                                              "pdf": "assets/ayuntamiento/ordenanzas-municipales/plan-autocontrol-piscina.pdf" },
+      { "tipo": "Reglamento",  "title": "Reglamento del Consejo de Sostenibilidad Local",                                           "pdf": "assets/ayuntamiento/ordenanzas-municipales/reglamento-consejo-sostenibilidad.pdf" }
+    ]
+  },
+  "perfil-contratante": {
+    "title": "Perfil del Contratante",
+    "intro": "Licitaciones, contratos y procedimientos de contratación pública del Ayuntamiento de Enguídanos. Cada expediente está disponible como documento oficial en PDF.",
+    "docs": [
+      { "tipo": "Pliego", "title": "Pliego de condiciones para el arrendamiento del local sito en Calle Virgen nº 3",                              "pdf": "assets/ayuntamiento/perfil-contratante/pliego-alquiler-local-virgen-3.pdf" },
+      { "tipo": "Pliego", "title": "Pliego de condiciones para el arrendamiento y acondicionamiento del Bar de la Piscina Municipal",              "pdf": "assets/ayuntamiento/perfil-contratante/pliego-bar-piscina.pdf" }
+    ]
+  },
+  "tramites-formularios": {
+    "title": "Trámites y Formularios",
+    "intro": "Modelos de solicitud, instancias y anexos del Ayuntamiento de Enguídanos para descargar, rellenar y presentar. Para tramitar en línea, accede a la Sede Electrónica.",
+    "docs": [
+      { "tipo": "Instancia",       "title": "Instancia general",                                                          "pdf": "assets/ayuntamiento/tramites-formularios/instancia-general.pdf" },
+      { "tipo": "Tributos",        "title": "Orden de domiciliación bancaria",                                             "pdf": "assets/ayuntamiento/tramites-formularios/orden-domiciliacion.pdf" },
+      { "tipo": "Tributos",        "title": "Solicitud de devolución de ingresos indebidos",                               "pdf": "assets/ayuntamiento/tramites-formularios/devolucion-ingresos-indebidos.pdf" },
+      { "tipo": "Tributos",        "title": "Solicitud de exención del Impuesto de Vehículos (IVTM)",                      "pdf": "assets/ayuntamiento/tramites-formularios/exencion-ivtm.pdf" },
+      { "tipo": "Urbanismo",       "title": "Solicitud de licencia de obra menor",                                         "pdf": "assets/ayuntamiento/tramites-formularios/licencia-obra-menor.pdf" },
+      { "tipo": "Registro civil",  "title": "Solicitud de partidas de nacimiento, matrimonio y defunción",                 "pdf": "assets/ayuntamiento/tramites-formularios/partidas-registro-civil.pdf" },
+      { "tipo": "Subvenciones",    "title": "Ayudas por catástrofes (RD 307/2005) · Presentación",                        "pdf": "assets/ayuntamiento/tramites-formularios/ayudas-catastrofes-rd307-2005.pdf" },
+      { "tipo": "Subvenciones",    "title": "Anexo I · Ayuda a unidades familiares o de convivencia",                     "pdf": "assets/ayuntamiento/tramites-formularios/anexo-1-unidades-familiares.pdf" },
+      { "tipo": "Subvenciones",    "title": "Anexo III · Ayuda a corporaciones locales",                                  "pdf": "assets/ayuntamiento/tramites-formularios/anexo-3-corporaciones-locales.pdf" },
+      { "tipo": "Subvenciones",    "title": "Anexo IV · Ayuda por prestación de bienes o servicios",                      "pdf": "assets/ayuntamiento/tramites-formularios/anexo-4-prestacion-bienes-servicios.pdf" },
+      { "tipo": "Subvenciones",    "title": "Anexo V · Ayuda a comunidades de propietarios",                              "pdf": "assets/ayuntamiento/tramites-formularios/anexo-5-comunidades-propietarios.pdf" },
+      { "tipo": "Subvenciones",    "title": "Anexo VI · Ayuda a establecimientos industriales y comerciales",             "pdf": "assets/ayuntamiento/tramites-formularios/anexo-6-establecimientos.pdf" }
+    ]
+  },
+  "bandos": {
+    "title": "Bandos",
+    "intro": "Avisos y comunicaciones oficiales de la Alcaldía a los vecinos de Enguídanos.",
+    "firma": "Sergio de Fez Cerezuela",
+    "bandos": [
+      {
+        "title": "Voto por correo · Elecciones Generales 26 de junio de 2016",
+        "cuerpo": ["Se comunica que se puede solicitar el voto por correo para las Elecciones Generales del 26 de junio de 2016."]
+      },
+      {
+        "title": "Exposición del censo · Listas electorales",
+        "cuerpo": ["Se comunica que las listas del censo electoral están expuestas al público toda la semana (del 09/05 al 16/05). Aquella persona que quiera consultarla y efectuar las reclamaciones oportunas podrá hacerlo dentro del horario de oficinas de nuestro Ayuntamiento."]
+      },
+      {
+        "title": "Servicio de información al alquiler",
+        "cuerpo": [
+          "El Ayuntamiento de Enguídanos activa un servicio de difusión de las viviendas en alquiler (no vacacional). Todos los propietarios interesados en alquilar una vivienda en el municipio pueden pasar por el Ayuntamiento para rellenar un formulario, o enviar los datos a info@enguidanos.es.",
+          "Tras ser revisadas, las propuestas se publicarán en la app municipal de forma gratuita."
+        ],
+        "campos": ["Tipo de inmueble", "Dirección", "Teléfono", "Correo electrónico", "Nº de habitaciones", "Nº de aseos", "Superficie", "Precio", "Fotos"]
+      },
+      {
+        "title": "Tenencia de perros · Obligaciones de los propietarios",
+        "fecha": "Enguídanos, 7 de febrero de 2012",
+        "cuerpo": [
+          "Se comunica a los propietarios de perros que tienen la obligación de llevarlos atados en toda la vía pública y que está totalmente prohibido que depositen sus heces en la vía pública, parques o zonas verdes urbanas, estando obligados los propietarios a recoger en bolsas las deposiciones y depositarlas en los contenedores.",
+          "Se convoca a todos los propietarios de perros el viernes 10 de febrero a las 12h en la Casa de la Cultura a una charla informativa para explicar la nueva ordenanza integral aprobada por el Ayuntamiento de Enguídanos donde se regulan las obligaciones de los propietarios de perros en el municipio.",
+          "Posteriormente se llevará a cabo una inspección en todo el casco urbano y se multará a aquellas personas que no cumplan con estas obligaciones."
+        ],
+        "cargo": "La Concejala de Sostenibilidad",
+        "firmante": "Carmen Atienza",
+        "pdf": "assets/ayuntamiento/bandos/bando-perros.pdf"
+      }
+    ]
+  }
+}

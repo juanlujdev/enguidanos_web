@@ -1,0 +1,252 @@
+[
+  {
+    "id": "cabeza-moya", "cat": "arqueologia",
+    "title": "Yacimiento Celtíbero", "titleEm": "del Cerro Cabeza Moya",
+    "img": "assets/patrimonio/opt/cabeza-moya.webp",
+    "excerpt": "Poblado celtíbero amurallado sobre el Cabriel, habitado entre los siglos V y III a.C.",
+    "desc": [
+      "Poblado celtíbero rodeado por las aguas del río Cabriel, que formaba el núcleo mayor de unos yacimientos circundantes dedicados al pastoreo. Habitado desde los siglos V a III a.C. (I y II Edad de Bronce), fue destruido por el fuego, quizá en una guerra con los romanos.",
+      "Los restos encontrados por Josefina Navarro y Carlos Sandoval en los años 80 se conservan actualmente en el Museo de Cuenca. El poblado está a 822 m sobre el nivel del mar: es un castro u observatorio avanzado, una línea defensiva de contención adelantada respecto a otros poblados, desde la cual los guerreros controlaban el valle del río.",
+      "Su extensión es grande, 25 × 275 m. Con las excavaciones se han descubierto habitaciones de planta cuadrada y rectangular, y también han aparecido cerámicas de origen griego y monedas romanas."
+    ],
+    "meta": [{ "k": "Época", "v": "s. V–III a.C." }, { "k": "Altitud", "v": "822 m" }, { "k": "Extensión", "v": "25 × 275 m" }]
+  },
+  {
+    "id": "centro-celtiberia", "cat": "arqueologia",
+    "title": "Futuro Centro de Interpretación", "titleEm": "de la Celtiberia",
+    "img": "assets/patrimonio/opt/centro-celtiberia.webp",
+    "excerpt": "Recreación de una casa y una necrópolis celtíberas junto al Castillo, visitable con cita previa.",
+    "desc": [
+      "En el Mirador del Sagrado Corazón, próximo al Castillo-fortaleza, se ha llevado a cabo una actuación singular aprovechando un taller de empleo para recrear una casa celtíbera, réplica de las existentes en el yacimiento de Cabeza Moya, que puede visitarse con guía y cita previa en la Oficina de Turismo.",
+      "También se ha reconstruido el cementerio, con la necrópolis donde podemos observar la pira funeraria y las estelas funerarias. En breve se espera instalar los paneles informativos del futuro Centro de Interpretación de la Celtiberia."
+    ],
+    "meta": [{ "k": "Visita", "v": "Con cita previa" }, { "k": "Origen", "v": "Taller de empleo TEPRO" }]
+  },
+  {
+    "id": "puente-romano", "cat": "arqueologia",
+    "title": "Antiguo Puente", "titleEm": "romano",
+    "img": "assets/patrimonio/opt/puente-romano.webp",
+    "excerpt": "Ruinas y pilastras de un puente romano sobre el Cabriel, visibles desde el puente de hierro.",
+    "desc": [
+      "Los restos del antiguo puente romano se encuentran en el término municipal de Enguídanos, sobre el río Cabriel. En la actualidad, solo se conservan ruinas y las pilastras de la estructura original, las cuales se pueden observar fácilmente desde el puente de hierro moderno."
+    ]
+  },
+  {
+    "id": "castillo", "cat": "monumentos",
+    "title": "Castillo-Fortaleza", "titleEm": "del siglo XI",
+    "img": "assets/patrimonio/opt/castillo.webp",
+    "excerpt": "Fortaleza árabe sobre un cerro escarpado a 734 m, origen del pueblo.",
+    "desc": [
+      "Se encuentra en un escarpado cerro, a unos 734 m de altitud. Construido por los árabes sobre la base de un castro íbero-romano entre los siglos X y XI, su misión primordial fue la defensa avanzada de los reinos levantinos. Su planta es casi rectangular, con tres cubos en las esquinas en forma de «D».",
+      "A partir de su construcción comenzaron a asentarse a su alrededor los primeros habitantes, dando lugar al nacimiento del Barrio de la Virgen, el Barrio de San Blas, la Plaza Mayor, el Barrio Cuenca y la Umbría.",
+      "Tras la reconquista cristiana perteneció primero al Marquesado de Villena y después al de Moya. Fue en los siglos XIV y XV cuando se terminó su edificación, con elementos góticos defensivos y elevando la altura de la Torre del Homenaje."
+    ],
+    "meta": [{ "k": "Origen", "v": "Siglos X–XI" }, { "k": "Altitud", "v": "734 m" }, { "k": "Acceso", "v": "Libre" }]
+  },
+  {
+    "id": "central-hidroelectrica", "cat": "industrial",
+    "title": "Central Hidroeléctrica", "titleEm": "Lucas de Urquijo",
+    "img": "assets/patrimonio/opt/central-hidroelectrica.webp",
+    "excerpt": "Central de 1914 sobre el Cabriel, con el poblado de sus trabajadores.",
+    "desc": [
+      "Su construcción data de 1914. La central se compone de dos edificios paralelos construidos de manera homogénea, y junto a ella se conservan los edificios abandonados de un antiguo poblado para los trabajadores de la central y de la desaparecida Hidroeléctrica Española.",
+      "Esta central se alimenta del agua del río Cabriel y del Guadazaón."
+    ],
+    "meta": [{ "k": "Año", "v": "1914" }, { "k": "Ríos", "v": "Cabriel y Guadazaón" }]
+  },
+  {
+    "id": "ermita-cruz", "cat": "monumentos",
+    "title": "Ermita", "titleEm": "de la Cruz",
+    "img": "assets/patrimonio/opt/ermita-cruz.webp",
+    "excerpt": "Ermita en la subida al cementerio, con vistas del Campichuelo. Fiesta el 3 de mayo.",
+    "desc": [
+      "Situada en la subida al cementerio, en esta ermita se celebra el día 3 de mayo la festividad de la Cruz y se bendicen las caridades.",
+      "Tiene unas vistas impresionantes del Campichuelo."
+    ],
+    "meta": [{ "k": "Fiesta", "v": "3 de mayo" }]
+  },
+  {
+    "id": "estacion-tren", "cat": "industrial",
+    "title": "Antigua Estación", "titleEm": "de tren",
+    "img": "assets/patrimonio/opt/estacion-tren.webp",
+    "excerpt": "Antigua estación abandonada junto al puente de la Cortina, el mayor de la zona.",
+    "desc": [
+      "Esta vieja estación se encuentra abandonada. Ni siquiera los pocos trenes que pasan con destino Madrid-Cuenca-Valencia tienen parada facultativa. Como todas las estaciones de su categoría, el conjunto de elementos patrimoniales abandonados lo forman la propia estación y apeadero, las casas de los trabajadores y el almacén.",
+      "Todos estos edificios serían fácilmente recuperables para acciones de tipo turístico —alojamiento, restauración, centro de interpretación, etc.—. Junto a la estación se puede observar el mayor puente de vía férrea de toda la zona: el puente de la Cortina."
+    ],
+    "meta": [{ "k": "Línea", "v": "Madrid–Cuenca–Valencia" }, { "k": "Junto a", "v": "Puente de la Cortina" }]
+  },
+  {
+    "id": "iglesia-asuncion", "cat": "monumentos",
+    "title": "Iglesia Ntra. Sra.", "titleEm": "de la Asunción",
+    "img": "assets/patrimonio/opt/iglesia-asuncion.webp",
+    "excerpt": "Templo gótico-mudéjar de los siglos XV-XVI con un valioso artesonado de madera.",
+    "desc": [
+      "Se encuentra en la Plaza Rafael Torrella y data de los siglos XV-XVI. Su estilo es gótico y mudéjar. Tiene una austera torre cuadrada adosada a la única nave, de planta rectangular, con puerta de entrada del gótico tardío.",
+      "La nave tiene cubierta a dos aguas y su principal importancia radica en un artesonado de madera de gran valor y una pila bautismal del mismo siglo de construcción de la iglesia. Esta pila tiene gallones en su parte inferior y, sobre ellos, arcos de medio punto, siendo su soporte octogonal."
+    ],
+    "meta": [{ "k": "Estilo", "v": "Gótico-mudéjar" }, { "k": "Siglos", "v": "XV–XVI" }]
+  },
+  {
+    "id": "lavadero", "cat": "industrial",
+    "title": "Lavadero", "titleEm": "público",
+    "img": "assets/patrimonio/opt/lavadero-publico.webp",
+    "excerpt": "Lavadero cubierto de 1963, rehabilitado en 2001, de una losa de más de 15 metros.",
+    "desc": [
+      "Construido en 1963, ha sido cuidado y rehabilitado en el año 2001, integrándose en los monumentos y lugares de interés del municipio.",
+      "Se trata de un lavadero de tipo cubierto y elevado, de una sola losa corrida de más de 15 metros. Su caudal, abundante, lo recibe de uno de los manantiales que tiene la población."
+    ],
+    "meta": [{ "k": "Construido", "v": "1963" }, { "k": "Rehabilitado", "v": "2001" }]
+  },
+  {
+    "id": "mirador-cueva", "cat": "miradores",
+    "title": "Mirador", "titleEm": "de la Cueva",
+    "img": "assets/patrimonio/opt/mirador-cueva.webp",
+    "excerpt": "Vistas del casco urbano desde el sur, con la iglesia y el Castillo.",
+    "desc": [
+      "Permite observar el paisaje urbano de Enguídanos desde el sur, obteniendo unas vistas extraordinarias del casco urbano, con la iglesia y su torre y la Plaza Mayor, presidido todo por la majestuosidad del Castillo."
+    ]
+  },
+  {
+    "id": "mirador-reloj-solar", "cat": "miradores",
+    "title": "Mirador", "titleEm": "del Reloj Solar",
+    "img": "assets/patrimonio/opt/mirador-reloj-solar-foto.webp",
+    "excerpt": "Pasada la piscina, vistas del Cabriel y un reloj solar.",
+    "desc": [
+      "Se encuentra al pasar la piscina, y desde allí se pueden observar unas vistas del río Cabriel de gran belleza, así como un reloj solar."
+    ]
+  },
+  {
+    "id": "mirador-sagrado-corazon", "cat": "miradores",
+    "title": "Mirador", "titleEm": "del Sagrado Corazón",
+    "img": "assets/patrimonio/opt/mirador-sagrado-corazon-foto.webp",
+    "excerpt": "Mirador a los pies del Cristo, en lo alto del cerro del Castillo.",
+    "desc": [
+      "En lo alto del cerro del Castillo existe una escultura sobre pedestal del Sagrado Corazón de Jesús y, a su pie, el Ayuntamiento ha instalado un mirador desde el que divisar el pueblo desde su parte norte, muy cercano al entramado urbanístico.",
+      "A pocos metros se accede al Castillo."
+    ]
+  },
+  {
+    "id": "mirador-virgen", "cat": "miradores",
+    "title": "Mirador", "titleEm": "de la Virgen",
+    "img": "assets/patrimonio/opt/mirador-virgen-foto.webp",
+    "excerpt": "A espaldas del Castillo, vistas del valle del Cabriel y la Playeta.",
+    "desc": [
+      "Se sitúa a espaldas del Castillo, al final de la calle de la Virgen. Desde este mirador se obtienen vistas magníficas del valle del río Cabriel a su paso por este lugar, del propio río, de las huertas, de la zona de la Lastra y la Playeta y de la Serranía Baja conquense."
+    ]
+  },
+  {
+    "id": "mirador-hoz-agua", "cat": "miradores",
+    "title": "Mirador", "titleEm": "de la Hoz del Agua",
+    "img": "assets/patrimonio/opt/mirador-hoz-agua.webp",
+    "excerpt": "Vistas en altura de la Hoz del Agua, con sus paredes de roca y la vega del fondo.",
+    "desc": [
+      "Asomado a la Hoz del Agua, este mirador domina el cañón labrado por el agua entre cantiles de roca caliza, con la vega y los caminos del fondo del valle.",
+      "Es uno de los puntos del sendero PR CU-50, salpicado de fuentes y manantiales que afloran en los barrancos."
+    ]
+  },
+  {
+    "id": "mirador-hoz-tejo", "cat": "miradores",
+    "title": "Mirador", "titleEm": "de la Hoz del Tejo",
+    "img": "assets/patrimonio/opt/mirador-hoz-tejo.webp",
+    "excerpt": "Mirador sobre el meandro encajado del Cabriel, entre paredes de roca y aguas verdes.",
+    "desc": [
+      "Mirador asomado a la Hoz del Tejo, donde el río Cabriel describe un cerrado meandro encajado entre altas paredes de roca caliza.",
+      "Desde lo alto se contemplan las aguas verdes del cañón, los pinares de las laderas y, al fondo, la lámina del embalse."
+    ]
+  },
+  {
+    "id": "mirador-rio-mira", "cat": "miradores",
+    "title": "Mirador", "titleEm": "del Río Mira",
+    "img": "assets/patrimonio/opt/mirador-rio-mira.webp",
+    "imgPos": "center 85%",
+    "excerpt": "Balcón sobre la hoz del río Mira, frente a un gran cantil de roca dorada.",
+    "desc": [
+      "Mirador con barandilla de madera asomado a la hoz del río Mira, frente a las imponentes paredes verticales de roca caliza que el agua ha labrado en el cañón.",
+      "Es uno de los puntos del sendero PR CU-54, con vistas de los pinares de las laderas y, al fondo, del embalse de Contreras."
+    ]
+  },
+  {
+    "id": "mirador-perejil", "cat": "miradores",
+    "title": "Mirador", "titleEm": "del Perejil",
+    "img": "assets/patrimonio/opt/mirador-perejil.webp",
+    "excerpt": "Vistas abismales del Cabriel, donde el río hace frontera entre Enguídanos y La Pesquera.",
+    "desc": [
+      "Mirador asomado al lugar donde el río Cabriel hace de frontera natural entre Enguídanos y La Pesquera, con vistas abismales del cañón y sus aguas verdes encajadas entre paredes de roca.",
+      "Es uno de los puntos del sendero PR CU-54, rodeado de pinares sobre las laderas de la hoz."
+    ]
+  },
+  {
+    "id": "molino-golpecillo", "cat": "industrial",
+    "title": "Molino de", "titleEm": "«El Golpecillo»",
+    "img": "assets/patrimonio/opt/molino-golpecillo-foto.webp",
+    "excerpt": "Molino y batán en ruinas sobre el Guadazaón, junto a un salto de agua.",
+    "desc": [
+      "Antiguo molino y batán a orillas del río Guadazaón, del que se nutría por medio de una canalización construida con arcos y piedras sillares de gran interés, y una edificación —también en piedra sillar— de gran singularidad.",
+      "Su estado es de ruina total, pero conserva los tres arcos de medio punto del edificio y la estructura y cimientos de todas las construcciones anejas que allí había. A pocos metros se encuentra el salto en cascada del río Guadazaón, lo que otorga un valor añadido a este enclave."
+    ]
+  },
+  {
+    "id": "plaza-casas-solariegas", "cat": "monumentos",
+    "title": "Conjunto de la Plaza", "titleEm": "y casas solariegas",
+    "img": "assets/patrimonio/opt/plaza-casas-solariegas-v2.webp",
+    "excerpt": "Plaza de 1907 con balcones de madera, fuente y casas solariegas con escudos.",
+    "desc": [
+      "La plaza, que lleva el nombre del alcalde D. Rafael Torrella, tiene una especial importancia por sus balcones de madera, sus puertas y ventanas —hay un portalón adintelado con una inscripción de 1766— y por su fuente, construida en 1907 según su inscripción, en forma de monolito de cuatro lados y pilón circular con cuatro chorros.",
+      "De la plaza salen seis calles, encontrándose en una de sus esquinas el Ayuntamiento y en otra la iglesia. Recorriendo la ruta urbana monumental podremos encontrar casas de gran importancia en las calles Cuenca, Virgen y en la propia plaza, así como escudos de gran antigüedad en las calles Espada, Cuenca y Larga."
+    ],
+    "meta": [{ "k": "Fuente", "v": "1907" }, { "k": "Portalón", "v": "1766" }]
+  },
+  {
+    "id": "represa-lastra", "cat": "industrial",
+    "title": "Represa", "titleEm": "de la Lastra",
+    "img": "assets/patrimonio/opt/represa-lastra-v2.webp",
+    "excerpt": "Antigua represa sobre el Cabriel que forma una pequeña playa de baño.",
+    "desc": [
+      "Antigua represa abandonada sobre el río Cabriel que conserva bastante bien la obra de ingeniería propia de este tipo de construcción hidráulica.",
+      "En su salida de agua provoca un pequeño ensanche que, en su orilla sur, forma una pequeña playa donde toman el baño quienes hasta allí llegan."
+    ]
+  },
+  {
+    "id": "escudo-puerta", "cat": "heraldica",
+    "title": "Escudo de Armas", "titleEm": "y puerta",
+    "img": "assets/patrimonio/opt/escudo-puerta.webp",
+    "excerpt": "Escudo nobiliario en la clave de un arco de medio punto de piedra sillar.",
+    "desc": [
+      "Otro de los escudos nobiliarios de la villa. El escudo se encuentra en la portada, con arco de medio punto de piedra sillar, sobre la clave.",
+      "Falta el tejadillo de protección y urge la limpieza y rehabilitación de toda la fachada."
+    ]
+  },
+  {
+    "id": "escudo-larga", "cat": "heraldica",
+    "title": "Escudo de Armas", "titleEm": "de la calle Larga",
+    "img": "assets/patrimonio/opt/escudo-larga-v2.webp",
+    "excerpt": "Escudo de la calle Larga con la inscripción «AÑO 1659».",
+    "desc": [
+      "Escudo de armas situado en la calle Larga, único vestigio noble que queda en la casa. Debajo del escudo se lee la inscripción del año de construcción: «AÑO 1659».",
+      "En la casa contigua se descubre otro escudo, este más moderno, con decoración de un pájaro y la fecha de 1857. Estos dos escudos, junto al de la cercana calle Espada, son los únicos que quedan en el pueblo. Se desconoce a qué familias pertenecieron."
+    ],
+    "meta": [{ "k": "Inscripción", "v": "AÑO 1659" }]
+  },
+  {
+    "id": "casa-senorial", "cat": "monumentos",
+    "title": "Casa Señorial", "titleEm": "del siglo XIX",
+    "img": "assets/patrimonio/opt/casa-senorial.webp",
+    "excerpt": "Casa de construcción tradicional con balcón de madera y arco de piedra sillar.",
+    "desc": [
+      "Casa señorial de construcción tradicional, con dos alturas y un balcón de madera en el patio exterior que se abre a la calle mediante un arco de piedra sillar de bella factura. El conjunto de puerta, balcón y ventanas guarda una simetría interesante.",
+      "La portada es adintelada y sobre ella reposa un balcón con barandilla de hierro forjado. La puerta es de madera labrada, imitando dos columnas a modo de pilastras, con un medallón central con las iniciales de los antiguos dueños. A su derecha destaca la reja castellana que cubre la ventana.",
+      "En su interior conserva todavía las enormes vigas de madera de su estructura y parte de la solería de ladrillo abizcochado. La casa es muy grande y cuenta con patio, corral y antigua bodega."
+    ]
+  },
+  {
+    "id": "casa-curato", "cat": "monumentos",
+    "title": "Casa", "titleEm": "Curato",
+    "img": "assets/patrimonio/opt/casa-curato.webp",
+    "excerpt": "Antigua casa curato con arco de medio punto y escudo religioso sobre la clave.",
+    "desc": [
+      "Antigua casa que, por su escudo, estuvo destinada a casa curato. Tiene puerta con arco de medio punto en piedra sillar que arranca desde dos cornisas fajadas y, sobre la clave, un escudo religioso con cruz.",
+      "Está descuidada, cubierta de cal y alterada en sus vanos originarios."
+    ]
+  }
+]
