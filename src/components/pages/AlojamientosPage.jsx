@@ -1,8 +1,6 @@
 import React from 'react'
-const { useState } = React;
-import { PageHeroMedia } from './components/shared/index.js'
-import ALOJAMIENTOS from './data/alojamientos.json'
-// =============== ALOJAMIENTOS PAGE ===============
+import { PageHeroMedia } from '../shared/index.js'
+import ALOJAMIENTOS from '../../data/alojamientos.json'
 
 function alojaTelHref(p) { return "tel:" + p.replace(/[^\d+]/g, ""); }
 
@@ -66,4 +64,4 @@ function AlojamientosPage() {
   );
 }
 
-export { AlojamientosPage };
+export default AlojamientosPage

@@ -1,8 +1,6 @@
 import React from 'react'
-const { useState } = React;
-import { PageHeroMedia } from './components/shared/index.js'
-import RESTAURANTES from './data/restaurantes.json'
-// =============== RESTAURANTES PAGE ===============
+import { PageHeroMedia } from '../shared/index.js'
+import RESTAURANTES from '../../data/restaurantes.json'
 
 function telHref(p) { return "tel:" + p.replace(/[^\d+]/g, ""); }
 
@@ -56,4 +54,4 @@ function RestaurantesPage() {
   );
 }
 
-export { RestaurantesPage };
+export default RestaurantesPage
