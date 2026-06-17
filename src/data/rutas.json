@@ -1,8 +1,74 @@
 {
-  "PR CU-50":  { "code": "PR CU-50",  "name": "Sendero de la Hoz del Agua y Hoz Cerrada", "logo": "assets/rutas/logos/mini/pr-cu-50.webp",  "pdf": "assets/senderos/pr-cu-50.pdf" },
-  "PR CU-53":  { "code": "PR CU-53",  "name": "Sendero de Las Chorreras",                 "logo": "assets/rutas/logos/mini/pr-cu-53.webp",  "pdf": "assets/senderos/pr-cu-53.pdf" },
-  "PR CU-54":  { "code": "PR CU-54",  "name": "Sendero de los Cuatro Ríos",               "logo": "assets/rutas/logos/mini/pr-cu-54.webp",  "pdf": "assets/senderos/pr-cu-54.pdf" },
-  "GR 64":     { "code": "GR 64",     "name": "De Enguídanos a Mira",                     "logo": "assets/rutas/logos/mini/gr-64.webp",     "pdf": "assets/senderos/gr-64.pdf" },
-  "GR 66":     { "code": "GR 66",     "name": "Valle del Cabriel · Víllora – Enguídanos",  "logo": "assets/rutas/logos/mini/gr-66.webp",     "pdf": "assets/senderos/gr-66.pdf" },
-  "BTT CU-02": { "code": "BTT CU-02", "name": "Ruta de bicicleta de montaña",             "logo": "assets/rutas/logos/mini/btt-cu-02.webp", "pdf": "assets/senderos/btt-cu-02.pdf" }
+  "PR CU-50":  {
+    "code": "PR CU-50",
+    "name": "Sendero de la Hoz del Agua y Hoz Cerrada",
+    "logo": "assets/rutas/logos/pr-cu-50.webp",
+    "pdf": "assets/senderos/pr-cu-50.pdf",
+    "tipo": "Circular",
+    "dist": "8 km",
+    "tiempo": "2h 30 – 3h",
+    "dif": "Baja",
+    "fotos": ["assets/rutas/fotos/pr-cu-50-1.webp"],
+    "desc": "Recorrido circular desde el casco urbano que se adentra en la Hoz del Agua y la Hoz Cerrada, entre farallones de roca caliza, fuentes que riegan los huertos y miradores con amplias panorámicas del valle."
+  },
+  "PR CU-53":  {
+    "code": "PR CU-53",
+    "name": "Sendero de Las Chorreras",
+    "logo": "assets/rutas/logos/pr-cu-53.webp",
+    "pdf": "assets/senderos/pr-cu-53.pdf",
+    "tipo": "Circular",
+    "dist": "8 km",
+    "tiempo": "2h 30 – 3h",
+    "dif": "Baja",
+    "fotos": ["assets/rutas/fotos/pr-cu-53-2.webp"],
+    "desc": "Sendero junto al Cabriel hasta el paraje de Las Chorreras, con sus tobas cuaternarias y saltos de agua de color turquesa. Uno de los rincones más fotografiados del municipio."
+  },
+  "PR CU-54":  {
+    "code": "PR CU-54",
+    "name": "Sendero de los Cuatro Ríos",
+    "logo": "assets/rutas/logos/pr-cu-54.webp",
+    "pdf": "assets/senderos/pr-cu-54.pdf",
+    "tipo": "Circular",
+    "dist": "13,5 km",
+    "tiempo": "3h 30",
+    "dif": "Media",
+    "fotos": ["assets/rutas/fotos/pr-cu-54-1.webp"],
+    "desc": "La ruta más exigente y espectacular: sigue el entorno acuático del Cabriel, donde el agua ha tallado rápidos, estrechos y puentes rocosos en la caliza. La de mayor desnivel de la zona."
+  },
+  "GR 64":     {
+    "code": "GR 64",
+    "name": "De Enguídanos a Mira",
+    "logo": "assets/rutas/logos/gr-64.webp",
+    "pdf": "assets/senderos/gr-64.pdf",
+    "tipo": "Lineal",
+    "dist": "—",
+    "tiempo": "Jornada",
+    "dif": "Media",
+    "fotos": ["assets/rutas/fotos/gr-64-1.webp"],
+    "desc": "Entre olivos, almendros y pinares, este gran recorrido baja hasta las ruinas del Balneario del Salobral y la unión de los ríos Mira y Narboneta, con vistas a la imponente Hoz del Río Mira."
+  },
+  "GR 66":     {
+    "code": "GR 66",
+    "name": "Valle del Cabriel · Víllora – Enguídanos",
+    "logo": "assets/rutas/logos/gr-66.webp",
+    "pdf": "assets/senderos/gr-66.pdf",
+    "tipo": "Lineal",
+    "dist": "16,5 km",
+    "tiempo": "4h 30",
+    "dif": "Media",
+    "fotos": ["assets/rutas/fotos/gr-66-1.webp"],
+    "desc": "Primera etapa del GR 66, lineal de Víllora a Enguídanos, que recorre los valles y estribaciones del Valle del Cabriel atravesando viaductos y antiguos trazados."
+  },
+  "BTT CU-02": {
+    "code": "BTT CU-02",
+    "name": "Ruta de bicicleta de montaña",
+    "logo": "assets/rutas/logos/btt-cu-02.webp",
+    "pdf": "assets/senderos/btt-cu-02.pdf",
+    "tipo": "BTT",
+    "dist": "—",
+    "tiempo": "Media jornada",
+    "dif": "Baja",
+    "fotos": ["assets/rutas/fotos/btt-cu-02-1.webp"],
+    "desc": "Ruta señalizada de bici de montaña que enlaza los paisajes más bellos de Enguídanos: El Perejil, la Hoz del Río Mira, Las Chorreras o La Playeta. Baja dificultad, apta para iniciarse."
+  }
 }

@@ -1,5 +1,8 @@
 import React from 'react'
 import { PageHeroMedia, Icon } from '../shared/index.js'
+import RUTAS_JSON from '../../data/rutas.json'
+
+const RUTAS_SENDERISMO = Object.values(RUTAS_JSON)
 
 async function downloadPdf(e, pdf, name) {
   e.preventDefault();
@@ -21,50 +24,6 @@ async function downloadPdf(e, pdf, name) {
   }
 }
 
-const RUTAS_SENDERISMO = [
-  {
-    code: "PR CU-50", label: "Sendero de la Hoz del Agua y Hoz Cerrada",
-    logo: "assets/rutas/logos/pr-cu-50.webp", pdf: "assets/senderos/pr-cu-50.pdf",
-    tipo: "Circular", dist: "8 km", tiempo: "2h 30 – 3h", dif: "Baja",
-    fotos: ["assets/rutas/fotos/pr-cu-50-1.webp"],
-    desc: "Recorrido circular desde el casco urbano que se adentra en la Hoz del Agua y la Hoz Cerrada, entre farallones de roca caliza, fuentes que riegan los huertos y miradores con amplias panorámicas del valle.",
-  },
-  {
-    code: "PR CU-53", label: "Sendero de Las Chorreras",
-    logo: "assets/rutas/logos/pr-cu-53.webp", pdf: "assets/senderos/pr-cu-53.pdf",
-    tipo: "Circular", dist: "8 km", tiempo: "2h 30 – 3h", dif: "Baja",
-    fotos: ["assets/rutas/fotos/pr-cu-53-2.webp"],
-    desc: "Sendero junto al Cabriel hasta el paraje de Las Chorreras, con sus tobas cuaternarias y saltos de agua de color turquesa. Uno de los rincones más fotografiados del municipio.",
-  },
-  {
-    code: "PR CU-54", label: "Sendero de los Cuatro Ríos",
-    logo: "assets/rutas/logos/pr-cu-54.webp", pdf: "assets/senderos/pr-cu-54.pdf",
-    tipo: "Circular", dist: "13,5 km", tiempo: "3h 30", dif: "Media",
-    fotos: ["assets/rutas/fotos/pr-cu-54-1.webp"],
-    desc: "La ruta más exigente y espectacular: sigue el entorno acuático del Cabriel, donde el agua ha tallado rápidos, estrechos y puentes rocosos en la caliza. La de mayor desnivel de la zona.",
-  },
-  {
-    code: "GR 64", label: "De Enguídanos a Mira",
-    logo: "assets/rutas/logos/gr-64.webp", pdf: "assets/senderos/gr-64.pdf",
-    tipo: "Lineal", dist: "—", tiempo: "Jornada", dif: "Media",
-    fotos: ["assets/rutas/fotos/gr-64-1.webp"],
-    desc: "Entre olivos, almendros y pinares, este gran recorrido baja hasta las ruinas del Balneario del Salobral y la unión de los ríos Mira y Narboneta, con vistas a la imponente Hoz del Río Mira.",
-  },
-  {
-    code: "GR 66", label: "Valle del Cabriel · Víllora – Enguídanos",
-    logo: "assets/rutas/logos/gr-66.webp", pdf: "assets/senderos/gr-66.pdf",
-    tipo: "Lineal", dist: "16,5 km", tiempo: "4h 30", dif: "Media",
-    fotos: ["assets/rutas/fotos/gr-66-1.webp"],
-    desc: "Primera etapa del GR 66, lineal de Víllora a Enguídanos, que recorre los valles y estribaciones del Valle del Cabriel atravesando viaductos y antiguos trazados.",
-  },
-  {
-    code: "BTT CU-02", label: "Ruta de bicicleta de montaña",
-    logo: "assets/rutas/logos/btt-cu-02.webp", pdf: "assets/senderos/btt-cu-02.pdf",
-    tipo: "BTT", dist: "—", tiempo: "Media jornada", dif: "Baja",
-    fotos: ["assets/rutas/fotos/btt-cu-02-1.webp"],
-    desc: "Ruta señalizada de bici de montaña que enlaza los paisajes más bellos de Enguídanos: El Perejil, la Hoz del Río Mira, Las Chorreras o La Playeta. Baja dificultad, apta para iniciarse.",
-  },
-];
 
 function TurismoDeportivoPage() {
   return (
@@ -87,7 +46,7 @@ function TurismoDeportivoPage() {
                     <img className="td-logo" src={r.logo} alt={`Logo ${r.code}`} />
                     <div>
                       <div className="td-route-code mono">{r.code}</div>
-                      <h3 className="td-route-name serif">{r.label}</h3>
+                      <h3 className="td-route-name serif">{r.name}</h3>
                     </div>
                   </div>
                   <div className="td-route-meta">
@@ -97,7 +56,7 @@ function TurismoDeportivoPage() {
                     <span className={`td-chip td-dif td-dif-${r.dif.toLowerCase()}`}><strong>Dificultad</strong>{r.dif}</span>
                   </div>
                   <p className="td-route-desc">{r.desc}</p>
-                  <a className="td-dl mono" href={r.pdf} download={`${r.code} ${r.label}`.replace(/[^\w]+/g,"-")+".pdf"} onClick={(e) => downloadPdf(e, r.pdf, `${r.code} ${r.label}`)}>
+                  <a className="td-dl mono" href={r.pdf} download={`${r.code} ${r.name}`.replace(/[^\w]+/g,"-")+".pdf"} onClick={(e) => downloadPdf(e, r.pdf, `${r.code} ${r.name}`)}>
                     Descargar folleto&nbsp;<Icon.arrow />
                   </a>
                 </div>
