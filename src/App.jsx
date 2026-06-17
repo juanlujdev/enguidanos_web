@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useTweaks, TweaksPanel, TweakSection, TweakRadio, TweakSelect, TweakColor, TweakToggle } from './tweaks/TweaksPanel.jsx'
-import { Header, Hero, Marquee, Highlights, InteractiveMap, AgendaPreview, Gallery, News, Visit, Footer } from './components-shared.jsx'
+import { Header, Hero, Marquee, Highlights, InteractiveMap, AgendaPreview, Gallery, News, Visit, Footer } from './components/shared/index.js'
 import { NaturalezaPage, PatrimonioPage, HistoriaPage, AgendaPage, AyuntamientoPage, OficinaTurismoPage, TurismoPage, TurismoDeportivoPage } from './components-pages.jsx'
 import { RestaurantesPage } from './components-restaurantes.jsx'
 import { AlojamientosPage } from './components-alojamientos.jsx'

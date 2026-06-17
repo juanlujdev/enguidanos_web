@@ -1,6 +1,6 @@
 import React from 'react'
 const { useState } = React;
-import { PageHeroMedia } from './components-shared.jsx'
+import { PageHeroMedia } from './components/shared/index.js'
 import ALOJAMIENTOS from './data/alojamientos.json'
 // =============== ALOJAMIENTOS PAGE ===============
 
