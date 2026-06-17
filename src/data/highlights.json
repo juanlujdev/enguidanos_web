@@ -1,0 +1,7 @@
+[
+  { "id": "chorreras", "title": "Las Chorreras del Cabriel", "tag": "Reserva de la Biosfera", "meta": ["3,2 km · ruta lineal", "Dificultad media"], "img": "assets/chorreras.webp", "color": { "a": "#2d6a8e", "b": "#1a3d52" }, "nav": { "page": "naturaleza", "target": "feature" } },
+  { "id": "castillo", "title": "Castillo de Enguídanos", "tag": "Patrimonio · Siglo XI", "meta": ["Visitas libres"], "img": "assets/castillo.webp", "color": { "a": "#9c6b3a", "b": "#5a3d1f" }, "nav": { "page": "patrimonio", "target": "castillo" } },
+  { "id": "playeta", "title": "La Playeta", "tag": "Baño de río", "meta": ["Temporada estival", "Acceso libre"], "img": "assets/playeta.webp", "color": { "a": "#7ba3bc", "b": "#2d6a8e" }, "nav": { "page": "naturaleza", "target": "playeta-lastra" } },
+  { "id": "hoz", "title": "Hoz del Agua", "tag": "Cañón fluvial", "meta": ["Sendero PR-CU-53", "5,8 km · circular"], "img": "assets/hoz-del-agua-v2.webp", "color": { "a": "#5a7a4a", "b": "#2f4727" }, "nav": { "page": "naturaleza", "target": "hoz-agua" } },
+  { "id": "iglesia", "title": "Ntra. Sra. de la Asunción", "tag": "Arquitectura sacra", "meta": ["Renacimiento"], "img": "assets/iglesia-asuncion-inicio.webp", "color": { "a": "#c2562a", "b": "#7a3417" }, "nav": { "page": "patrimonio", "target": "iglesia-asuncion" } }
+]

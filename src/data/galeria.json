@@ -1,0 +1,14 @@
+[
+  { "title": "Chorreras al amanecer", "tag": "Naturaleza", "color": { "a": "#7ba3bc", "b": "#2d6a8e" }, "span": "tall", "img": "assets/chorreras-amanecer.webp" },
+  { "title": "Plaza Mayor", "tag": "Pueblo", "color": { "a": "#c2562a", "b": "#7a3417" }, "img": "assets/plaza-mayor.webp" },
+  { "title": "Castillo bajo la nieve", "tag": "Patrimonio", "color": { "a": "#a8b8a0", "b": "#5a6b50" }, "img": "assets/castillo-nieve.webp" },
+  { "title": "Río Cabriel", "tag": "Naturaleza", "color": { "a": "#2d6a8e", "b": "#1a3d52" }, "span": "wide", "img": "assets/rio-cabriel.webp" },
+  { "title": "Hoguera de San Blas", "tag": "Fiestas", "color": { "a": "#d4a017", "b": "#9c6b1a" }, "img": "assets/hoguera-san-blas.webp" },
+  { "title": "Atardecer en la Hoz", "tag": "Naturaleza", "color": { "a": "#c2562a", "b": "#5a3a17" }, "img": "assets/atardecer-hoz.webp" },
+  { "title": "Iglesia de la Asunción", "tag": "Patrimonio", "color": { "a": "#9c8a6a", "b": "#5a4f3a" }, "img": "assets/iglesia-asuncion-galeria.webp" },
+  { "title": "La Playeta en agosto", "tag": "Naturaleza", "color": { "a": "#7ba3bc", "b": "#4a7a8e" }, "span": "tall", "img": "assets/playeta-agosto.webp" },
+  { "title": "Bosque de pinos", "tag": "Naturaleza", "color": { "a": "#5a7a4a", "b": "#2f4727" }, "img": "assets/bosque-pinos.webp" },
+  { "title": "Calle empedrada", "tag": "Pueblo", "color": { "a": "#9c8a6a", "b": "#6b5a4a" }, "span": "wide" },
+  { "title": "Mercado artesano", "tag": "Cultura", "color": { "a": "#c2562a", "b": "#7a3417" }, "img": "assets/mercado-artesano.webp" },
+  { "title": "Embalse de Contreras", "tag": "Naturaleza", "color": { "a": "#2d6a8e", "b": "#1a3d52" }, "img": "assets/embalse-contreras-galeria.webp" }
+]

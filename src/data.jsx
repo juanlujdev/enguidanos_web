@@ -1,148 +1,18 @@
-// Datos del pueblo
-const PUEBLO = {
-  nombre: "Enguídanos",
-  provincia: "Cuenca",
-  comarca: "Serranía Baja",
-  habitantes: 286,
-  altitud: 802,
-  fundacion: "Siglo XI",
-};
-
-const HIGHLIGHTS = [
-  { id: "chorreras", title: "Las Chorreras del Cabriel", tag: "Reserva de la Biosfera", meta: ["3,2 km · ruta lineal", "Dificultad media"], img: "assets/chorreras.webp", color: { a: "#2d6a8e", b: "#1a3d52" }, nav: { page: "naturaleza", target: "feature" } },
-  { id: "castillo", title: "Castillo de Enguídanos", tag: "Patrimonio · Siglo XI", meta: ["Visitas libres"], img: "assets/castillo.webp", color: { a: "#9c6b3a", b: "#5a3d1f" }, nav: { page: "patrimonio", target: "castillo" } },
-  { id: "playeta", title: "La Playeta", tag: "Baño de río", meta: ["Temporada estival", "Acceso libre"], img: "assets/playeta.webp", color: { a: "#7ba3bc", b: "#2d6a8e" }, nav: { page: "naturaleza", target: "playeta-lastra" } },
-  { id: "hoz", title: "Hoz del Agua", tag: "Cañón fluvial", meta: ["Sendero PR-CU-53", "5,8 km · circular"], img: "assets/hoz-del-agua-v2.webp", color: { a: "#5a7a4a", b: "#2f4727" }, nav: { page: "naturaleza", target: "hoz-agua" } },
-  { id: "iglesia", title: "Ntra. Sra. de la Asunción", tag: "Arquitectura sacra", meta: ["Renacimiento"], img: "assets/iglesia-asuncion-inicio.webp", color: { a: "#c2562a", b: "#7a3417" }, nav: { page: "patrimonio", target: "iglesia-asuncion" } },
-];
-
-const POIS = [
-  // Naturaleza
-  { id: 1, name: "Las Chorreras del Cabriel", cat: "natura", lat: 39.7122, lng: -1.6176 },
-  { id: 2, name: "La Playeta", cat: "natura", lat: 39.68106739704856, lng: -1.6088885080221973 },
-  { id: 3, name: "Baños del Salobral", cat: "natura", lat: 39.6577886551544, lng: -1.5754450791527144 },
-  { id: 4, name: "Túnel de Yeso", cat: "natura", lat: 39.6656888302423, lng: -1.576554632609505 },
-  { id: 5, name: "Mirador del Reloj Solar", cat: "miradores", lat: 39.67778365877174, lng: -1.6068701002857313 },
-  { id: 6, name: "Mirador de la Virgen", cat: "miradores", lat: 39.67617921905336, lng: -1.6047907095736702 },
-  { id: 7, name: "Mirador de la Cueva", cat: "miradores", lat: 39.67199941216924, lng: -1.6073776093225005 },
-  { id: 8, name: "Mirador de la Hoz del Agua", cat: "miradores", lat: 39.67204525610164, lng: -1.6350038642934541 },
-  { id: 9, name: "Mirador del Embalse de Contreras", cat: "miradores", lat: 39.655031852824415, lng: -1.578176194635757 },
-  { id: 10, name: "Mirador de la Hoz del Tejo", cat: "miradores", lat: 39.64729820172709, lng: -1.571500133895063 },
-  { id: 11, name: "Mirador del Perejil", cat: "miradores", lat: 39.6344988213437, lng: -1.5756559912098482 },
-  { id: 12, name: "Mirador del Río Mira", cat: "miradores", lat: 39.66658078176728, lng: -1.56307921411265 },
-  // Naturaleza · hoces, embalses y enclaves (coordenadas aproximadas, ajustar si procede)
-  { id: 50, name: "Hoz Cerrada", cat: "natura", lat: 39.6772, lng: -1.6290 },
-  { id: 51, name: "Hoz del Río San Martín", cat: "natura", lat: 39.6395, lng: -1.5635 },
-  { id: 52, name: "El Golpecillo", cat: "natura", lat: 39.6905, lng: -1.5840 },
-  { id: 53, name: "Embalse del Batanejo", cat: "natura", lat: 39.714543646801616, lng: -1.6584923110612066 },
-  { id: 54, name: "Embalse de Víllora", cat: "natura", lat: 39.715428254098214, lng: -1.625516951937811 },
-  { id: 55, name: "El Charandel", cat: "natura", lat: 39.6625, lng: -1.5565 },
-  { id: 56, name: "Puente de la Cortina · Viaducto Torres Quevedo", cat: "natura", lat: 39.7160, lng: -1.5250 },
-  // Patrimonio
-  { id: 13, name: "Castillo de Enguídanos", cat: "patrimonio", lat: 39.67552909791369, lng: -1.606091978748276 },
-  { id: 14, name: "Iglesia de la Asunción", cat: "patrimonio", lat: 39.67357797296742, lng: -1.6066212024410986 },
-  { id: 15, name: "Plaza Mayor", cat: "patrimonio", lat: 39.6737599008769, lng: -1.6062864113001611 },
-  { id: 16, name: "Lavadero Público", cat: "patrimonio", lat: 39.673402997369834, lng: -1.60983265958171 },
-  { id: 17, name: "Casa de los Condes de la Roca", cat: "patrimonio", lat: 39.67423644404994, lng: -1.6070688767230914 },
-  { id: 18, name: "Escudo Heráldico de los Luján", cat: "patrimonio", lat: 39.672863861297486, lng: -1.6059874760750477 },
-  { id: 19, name: "Plaza de Toros", cat: "patrimonio", lat: 39.67206875406146, lng: -1.604404143242876 },
-  { id: 20, name: "Ermita de los Luján", cat: "patrimonio", lat: 39.67026290302239, lng: -1.601354285413135 },
-  { id: 21, name: "Ermita de San Isidro de la Cruz", cat: "patrimonio", lat: 39.669715489091466, lng: -1.5985838331104565 },
-  { id: 22, name: "Sagrado Corazón de Jesús", cat: "patrimonio", lat: 39.67442191349396, lng: -1.6064547792089445 },
-  { id: 23, name: "Yacimiento Celtíbero del Cerro Cabeza Moya", cat: "patrimonio", lat: 39.65521875815182, lng: -1.582181830677553 },
-  { id: 24, name: "Antigua Estación de Enguídanos", cat: "patrimonio", lat: 39.718304773992315, lng: -1.5207360206091072 },
-  { id: 57, name: "Central Hidroeléctrica Lucas de Urquijo", cat: "patrimonio", lat: 39.70475435230816, lng: -1.6243175613517395 },
-  { id: 58, name: "Escudo de Armas de la calle Larga", cat: "patrimonio", lat: 39.67301457538284, lng: -1.6068867271976108 },
-  { id: 59, name: "Casa Señorial del siglo XIX", cat: "patrimonio", lat: 39.67410710934972, lng: -1.6057739426198423 },
-  // Coordenadas aproximadas (ajustar si procede)
-  { id: 60, name: "Centro de Interpretación de la Celtiberia", cat: "patrimonio", lat: 39.6752, lng: -1.6055 },
-  { id: 61, name: "Antiguo Puente romano", cat: "patrimonio", lat: 39.674693623415976, lng: -1.5915130586827593 },
-  // Fuentes
-  { id: 25, name: "Fuente de San Blas", cat: "fuentes", lat: 39.67396342742319, lng: -1.602735392460413 },
-  { id: 26, name: "Fuente Carica", cat: "fuentes", lat: 39.67354640347937, lng: -1.6013030930040346 },
-  { id: 27, name: "Fuente El Pago", cat: "fuentes", lat: 39.67415425413865, lng: -1.612652355878782 },
-  { id: 28, name: "Fuente Donato", cat: "fuentes", lat: 39.67645707536412, lng: -1.615663434685928 },
-  { id: 29, name: "Fuente de Teo", cat: "fuentes", lat: 39.68022496314646, lng: -1.6170839070401446 },
-  // Comer
-  { id: 30, name: "Cafetería Nhora", cat: "comer", lat: 39.673522338332965, lng: -1.6070272581228833 },
-  { id: 31, name: "Restaurante El Cabriel", cat: "comer", lat: 39.67284020227486, lng: -1.6107080117506092 },
-  { id: 32, name: "Bar Los Jubilados", cat: "comer", lat: 39.67297389880308, lng: -1.608686154301135 },
-  { id: 33, name: "Restaurante El Cobijo de los Sentidos", cat: "comer", lat: 39.67346846830558, lng: -1.6055596466345778 },
-  { id: 34, name: "Bar La Sentaeta", cat: "comer", lat: 39.67624518625806, lng: -1.6074786556419685 },
-  { id: 49, name: "El Pub de Todos", cat: "comer", lat: 39.67307308873451, lng: -1.606752246595339 },
-  // Dormir
-  { id: 35, name: "Casas de la Vega", cat: "dormir", lat: 39.705325618594614, lng: -1.589297915836064 },
-  { id: 36, name: "Casa Rural Mirador de la Cueva", cat: "dormir", lat: 39.67204536743383, lng: -1.60848332490215 },
-  { id: 37, name: "Los Carriles", cat: "dormir", lat: 39.672948108880874, lng: -1.6116274358191522 },
-  { id: 38, name: "Casa Rural La Lumbre", cat: "dormir", lat: 39.67443650891199, lng: -1.6059127895833532 },
-  { id: 39, name: "Apartamentos El Rincón de Piedra", cat: "dormir", lat: 39.673464781948894, lng: -1.6056732081133749 },
-  { id: 40, name: "Hotel Casa Rural El Cabriel", cat: "dormir", lat: 39.67284020227486, lng: -1.6107080117506092 },
-  // Servicios
-  { id: 41, name: "Ayuntamiento de Enguídanos", cat: "servicios", lat: 39.67389107107602, lng: -1.605926014972524 },
-  { id: 42, name: "Oficina de Turismo", cat: "servicios", lat: 39.673980050705254, lng: -1.6057592237422211 },
-  { id: 43, name: "Biblioteca Pública Municipal", cat: "servicios", lat: 39.67307088202771, lng: -1.6082864453761918 },
-  { id: 44, name: "Estanco-Panadería", cat: "servicios", lat: 39.673571723194065, lng: -1.6072178952723681 },
-  { id: 45, name: "Carnicería Urbano", cat: "servicios", lat: 39.67362930379305, lng: -1.6064465478101617 },
-  { id: 46, name: "Centro de Salud", cat: "servicios", lat: 39.6739973872446, lng: -1.6079949833390854 },
-  { id: 47, name: "Farmacia", cat: "servicios", lat: 39.67405003115148, lng: -1.6080660618701603 },
-  { id: 48, name: "Cajero Automático", cat: "servicios", lat: 39.67395853255353, lng: -1.6058656967274756 },
-];
-
-const POI_CAT = {
-  natura: { label: "Naturaleza", color: "#4a6b3a" },
-  miradores: { label: "Miradores", color: "#b5566e" },
-  patrimonio: { label: "Patrimonio", color: "#c2562a" },
-  fuentes: { label: "Fuentes", color: "#2d8e9c" },
-  comer: { label: "Comer", color: "#d4a017" },
-  dormir: { label: "Dormir", color: "#2d6a8e" },
-  servicios: { label: "Servicios", color: "#7a6a9c" },
-};
+import PUEBLO from './data/pueblo.json'
+import HIGHLIGHTS from './data/highlights.json'
+import POIS from './data/pois.json'
+import POI_CAT from './data/poi-cats.json'
+import AGENDA_CATS from './data/agenda-cats.json'
+import GALERIA from './data/galeria.json'
+import NOTICIAS from './data/noticias.json'
+import ALCALDE from './data/alcalde.json'
+export { MES_ABBR, parseEvDate, expandEventos } from './utils/eventos.js'
 
 // ============================================================
 //  AGENDA CULTURAL DE ENGUÍDANOS
 // ============================================================
-// Categorías de la agenda. Cada una da color (punto del calendario,
-// chip de filtro) y etiqueta. Para crear un tipo nuevo, añádelo aquí
-// y referencia su clave en el campo `cat` del evento.
-const AGENDA_CATS = {
-  fest:     { label: "Fiestas",      color: "#c2562a" },
-  cult:     { label: "Cultura",      color: "#4a6b3a" },
-  nat:      { label: "Naturaleza",   color: "#2d6a8e" },
-  gastro:   { label: "Gastronomía",  color: "#b07d1f" },
-  form:     { label: "Formación",    color: "#8a6477" },
-  servicio: { label: "Servicios",    color: "#5a6b78" },
-};
-
-const MES_ABBR = ["ENE","FEB","MAR","ABR","MAY","JUN","JUL","AGO","SEP","OCT","NOV","DIC"];
-// Parsea "AAAA-MM-DD" o "AAAA-MM" → { y, mi (mes 0-11), day (nº|null), abbr }
-function parseEvDate(date) {
-  const [y, m, d] = String(date).split("-").map(Number);
-  const mi = (m || 1) - 1;
-  return { y, mi, day: d || null, abbr: MES_ABBR[mi] };
-}
-
-// Expande la agenda: los eventos con `dias` se convierten en una fila por
-// día (todas con el mismo cartel); los demás quedan tal cual. Devuelve la
-// lista plana de filas que se muestran en la agenda y el calendario.
-function expandEventos(list) {
-  const out = [];
-  for (const e of list) {
-    if (e.dias && e.dias.length) {
-      e.dias.forEach((dia, i) => out.push({
-        ...e,
-        date: dia.date,
-        dayLabel: dia.label,
-        items: dia.items || [],
-        when: dia.label,
-        multi: true,
-        key: e.title + "|" + dia.date + "|" + i,
-      }));
-    } else {
-      out.push({ ...e, items: e.items || null, key: e.title + "|" + e.date });
-    }
-  }
-  return out;
-}
+// Categorías de la agenda. Para crear un tipo nuevo, añádelo en
+// src/data/agenda-cats.json y referencia su clave en el campo `cat`.
 
 // ── CÓMO AÑADIR UN EVENTO NUEVO ──────────────────────────────
 // Copia un bloque de abajo, mantén el orden por fecha y rellena:
@@ -282,17 +152,7 @@ const EVENTOS = [
     ] },
 ];
 
-// Saludo del alcalde
-const ALCALDE = {
-  nombre: "Sergio de Fez",
-  cargo: "Alcalde de Enguídanos",
-  parrafos: [
-    "Quiero dar la bienvenida a tod@s l@s visitantes a la página web de Enguídanos, con la que pretendemos tener una comunicación más directa y fluida con vecinos, turistas y todo aquel vinculado al municipio, aprovechando las posibilidades de las nuevas tecnologías.",
-    "Enguídanos es un municipio de la comarca de la Manchuela Conquense, situado en pleno Valle del Río Cabriel. Cruzan cinco ríos por su término —Cabriel, Guadazaón, Mira, Narboneta y San Martín— con multitud de fuentes y manantiales, y en él dejaron su impronta los pueblos celtíberos, romanos y árabes, entre otros.",
-    "Estamos impulsando un modelo de desarrollo sostenible que genere empleo y riqueza y, a la vez, sea respetuoso con el medio ambiente y con el legado de nuestros antepasados.",
-    "Sirva esta invitación para que nos visiten, nos conozcan y disfruten de nuestras fiestas, cultura, tradiciones, gastronomía, patrimonio, rutas y parajes naturales, todo ello unido al trato hospitalario y acogedor de los enguidanenses.",
-  ],
-};
+// ALCALDE importado desde src/data/alcalde.json
 
 // Áreas del Ayuntamiento — submenú "Ayuntamiento" del sitio oficial
 const TRAMITES = [
@@ -446,26 +306,7 @@ const AREAS_CONTENT = {
   },
 };
 
-const NOTICIAS = [
-  { tag: "Turismo", date: "01 JUL 2026", title: "Abre la nueva Oficina de Turismo de Enguídanos", excerpt: "Desde el 1 de julio, la Calle Virgen nº 3 acoge la nueva sede: mapas y folletos oficiales, información sobre comercio, alojamiento y hostelería, rutas de senderismo y visitas guiadas al patrimonio. Toda la información también, actualizada, en enguidanos.es.", time: "2 min", color: { a: "#5a7a4a", b: "#2f4727" }, img: "assets/noticia-oficina-turismo.webp" },
-  { tag: "Juventud", date: "30 JUN 2026", title: "Vuelve la Escuela de Verano a Enguídanos", excerpt: "El Ayuntamiento organiza una nueva edición de la Escuela de Verano para los más pequeños, a partir del 1 de julio. Horarios, actividades, plazos e inscripciones en la Ludoteca Municipal de Enguídanos.", time: "2 min", color: { a: "#7ba3bc", b: "#2d6a8e" }, img: "assets/noticia-escuela-verano.webp" },
-  { tag: "Sostenibilidad", date: "03 JUN 2026", title: "Recogida de electrodomésticos en Enguídanos", excerpt: "Dale una segunda vida a tus electrodomésticos y cuidemos nuestro entorno. El miércoles 3 de junio, a las 9:00, en el punto de recogida de La Báscula Municipal.", time: "1 min", color: { a: "#5a7a4a", b: "#2f4727" }, img: "assets/noticia-recogida-electrodomesticos.webp" },
-];
-
-const GALERIA = [
-  { title: "Chorreras al amanecer", tag: "Naturaleza", color: { a: "#7ba3bc", b: "#2d6a8e" }, span: "tall", img: "assets/chorreras-amanecer.webp" },
-  { title: "Plaza Mayor", tag: "Pueblo", color: { a: "#c2562a", b: "#7a3417" }, img: "assets/plaza-mayor.webp" },
-  { title: "Castillo bajo la nieve", tag: "Patrimonio", color: { a: "#a8b8a0", b: "#5a6b50" }, img: "assets/castillo-nieve.webp" },
-  { title: "Río Cabriel", tag: "Naturaleza", color: { a: "#2d6a8e", b: "#1a3d52" }, span: "wide", img: "assets/rio-cabriel.webp" },
-  { title: "Hoguera de San Blas", tag: "Fiestas", color: { a: "#d4a017", b: "#9c6b1a" }, img: "assets/hoguera-san-blas.webp" },
-  { title: "Atardecer en la Hoz", tag: "Naturaleza", color: { a: "#c2562a", b: "#5a3a17" }, img: "assets/atardecer-hoz.webp" },
-  { title: "Iglesia de la Asunción", tag: "Patrimonio", color: { a: "#9c8a6a", b: "#5a4f3a" }, img: "assets/iglesia-asuncion-galeria.webp" },
-  { title: "La Playeta en agosto", tag: "Naturaleza", color: { a: "#7ba3bc", b: "#4a7a8e" }, span: "tall", img: "assets/playeta-agosto.webp" },
-  { title: "Bosque de pinos", tag: "Naturaleza", color: { a: "#5a7a4a", b: "#2f4727" }, img: "assets/bosque-pinos.webp" },
-  { title: "Calle empedrada", tag: "Pueblo", color: { a: "#9c8a6a", b: "#6b5a4a" }, span: "wide" },
-  { title: "Mercado artesano", tag: "Cultura", color: { a: "#c2562a", b: "#7a3417" }, img: "assets/mercado-artesano.webp" },
-  { title: "Embalse de Contreras", tag: "Naturaleza", color: { a: "#2d6a8e", b: "#1a3d52" }, img: "assets/embalse-contreras-galeria.webp" },
-];
+// NOTICIAS y GALERIA importadas desde src/data/noticias.json y src/data/galeria.json
 
 // Categorías del patrimonio cultural — agrupación temática de los 20 elementos
 const PATRIMONIO_CATS = {
@@ -933,7 +774,7 @@ const NATURALEZA_FUENTES = [
 ];
 
 export {
-  PUEBLO, HIGHLIGHTS, POIS, POI_CAT, EVENTOS, AGENDA_CATS, parseEvDate, expandEventos, MES_ABBR,
-  TRAMITES, AREAS_CONTENT, ALCALDE, NOTICIAS, GALERIA, PATRIMONIO, PATRIMONIO_CATS,
+  PUEBLO, HIGHLIGHTS, POIS, POI_CAT, AGENDA_CATS, GALERIA, NOTICIAS, ALCALDE,
+  EVENTOS, TRAMITES, AREAS_CONTENT, PATRIMONIO, PATRIMONIO_CATS,
   NATURALEZA, NATURALEZA_CATS, NATURALEZA_DESTACADO, NATURALEZA_RIOS, NATURALEZA_FUENTES, RUTAS_INFO,
 };

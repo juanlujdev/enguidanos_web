@@ -1,0 +1,9 @@
+{
+  "natura":     { "label": "Naturaleza",  "color": "#4a6b3a" },
+  "miradores":  { "label": "Miradores",   "color": "#b5566e" },
+  "patrimonio": { "label": "Patrimonio",  "color": "#c2562a" },
+  "fuentes":    { "label": "Fuentes",     "color": "#2d8e9c" },
+  "comer":      { "label": "Comer",       "color": "#d4a017" },
+  "dormir":     { "label": "Dormir",      "color": "#2d6a8e" },
+  "servicios":  { "label": "Servicios",   "color": "#7a6a9c" }
+}

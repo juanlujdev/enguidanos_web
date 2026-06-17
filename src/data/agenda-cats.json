@@ -1,0 +1,8 @@
+{
+  "fest":     { "label": "Fiestas",     "color": "#c2562a" },
+  "cult":     { "label": "Cultura",     "color": "#4a6b3a" },
+  "nat":      { "label": "Naturaleza",  "color": "#2d6a8e" },
+  "gastro":   { "label": "Gastronomía", "color": "#b07d1f" },
+  "form":     { "label": "Formación",   "color": "#8a6477" },
+  "servicio": { "label": "Servicios",   "color": "#5a6b78" }
+}
