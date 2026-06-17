@@ -1,3 +1,9 @@
+# Node dependencies
+node_modules/
+
+# Vite build output
+dist/
+
 # Backups de imágenes originales (pre-conversión WebP)
 assets/_backup/
 
