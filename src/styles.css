@@ -477,6 +477,7 @@ h1, h2, h3, h4 {
   padding: 120px 0 64px;
   color: #fff;
   overflow: hidden;
+  background: #1c1f15;
   /* Garantiza que el arrastre vertical con el dedo SIEMPRE haga scroll
      (en móvil/emulación táctil un drag sobre el vídeo o el texto no debe
      iniciar selección ni arrastre de imagen, solo desplazamiento). */

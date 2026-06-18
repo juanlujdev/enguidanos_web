@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PUEBLO from '../../data/pueblo.json'
 
 function Hero({ setPage }) {
+  const [videoFailed, setVideoFailed] = useState(false)
+
   return (
     <section className="hero">
       <div className="hero-bg">
@@ -12,9 +14,10 @@ function Hero({ setPage }) {
           loop
           playsInline
           draggable={false}
-          src="assets/portada-v2.mp4">
+          src="assets/portada-v2.mp4"
+          onError={() => setVideoFailed(true)}>
         </video>
-        <div className="placeholder-video" style={{zIndex:-1}}></div>
+        <div className="placeholder-video" style={{opacity: videoFailed ? 1 : 0}}></div>
       </div>
       <div className="container hero-content">
         <div className="reveal in">

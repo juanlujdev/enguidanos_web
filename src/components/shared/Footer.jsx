@@ -43,7 +43,6 @@ function Footer({ setPage, navigate }) {
             <span>Ayuntamiento de Enguídanos · {new Date().getFullYear()}</span>
           </div>
           <span>
-            Diseño rediseñado con cariño ·{' '}
             <a onClick={() => setPage("aviso-legal")} style={{cursor:'pointer'}}>Aviso legal</a> ·{' '}
             <a onClick={() => setPage("privacidad")} style={{cursor:'pointer'}}>Privacidad</a> ·{' '}
             <a onClick={() => setPage("accesibilidad")} style={{cursor:'pointer'}}>Accesibilidad</a>
