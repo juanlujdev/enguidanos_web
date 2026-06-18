@@ -19,7 +19,7 @@ async function downloadPdf(e, pdf, name) {
     a.remove();
     setTimeout(() => URL.revokeObjectURL(url), 60000);
   } catch (err) {
-    window.location.href = pdf;
+    window.open(pdf, '_blank', 'noopener');
   }
 }
 
