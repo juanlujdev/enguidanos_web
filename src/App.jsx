@@ -22,6 +22,14 @@ function App() {
   const navigate = (dest, target = null) => { setNavTarget(target); setPage(dest); };
   const goClear = (dest) => navigate(dest, null);
 
+  // Ocultar splash cuando React termina de montar
+  useEffect(() => {
+    const splash = document.getElementById('splash')
+    if (!splash) return
+    splash.style.opacity = '0'
+    splash.addEventListener('transitionend', () => splash.remove(), { once: true })
+  }, [])
+
   // Apply tweaks
   useEffect(() => {
     document.documentElement.style.setProperty("--terracota", tweaks.primaryAccent);
