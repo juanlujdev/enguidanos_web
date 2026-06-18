@@ -173,7 +173,12 @@ function AreaDetail({ slug, onBack }) {
 function AyuntamientoPage({ navTarget }) {
   const [area, setArea] = useState(null);
   useEffect(() => {
-    if (navTarget && navTarget.indexOf("area:") === 0) setArea(navTarget.slice(5));
+    if (navTarget && navTarget.indexOf("area:") === 0) {
+      window.scrollTo(0, 0);
+      setArea(navTarget.slice(5));
+    } else if (!navTarget) {
+      setArea(null);
+    }
   }, [navTarget]);
   if (area) return <AreaDetail slug={area} onBack={() => { window.scrollTo(0,0); setArea(null); }} />;
   return (

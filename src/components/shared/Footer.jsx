@@ -32,7 +32,7 @@ function Footer({ setPage, navigate }) {
             <ul>
               <li><a>C/ San Blas, 2</a></li>
               <li><a>16372 Enguídanos</a></li>
-              <li><a>969 145 002</a></li>
+              <li><a href="tel:969145002">969 145 002</a></li>
               <li><a>info@enguidanos.es</a></li>
             </ul>
           </div>
