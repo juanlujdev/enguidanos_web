@@ -4126,3 +4126,23 @@ a.resto-contact-item:hover { color: var(--terracota); }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--line); border-radius: 6px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--ink-3); }
+
+/* ── Páginas legales ─────────────────────────────────────────────────── */
+.legal-page { padding-top: 96px; padding-bottom: 96px; }
+.legal-header { padding-bottom: 32px; border-bottom: 1px solid var(--line); margin-bottom: 0; }
+.legal-header .mono { color: var(--terracota); margin-bottom: 12px; }
+.legal-header h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin: 0; }
+.legal-body { max-width: 720px; padding: 48px 0 0; }
+.legal-body section { margin-bottom: 40px; }
+.legal-body h2 { font-size: 1.15rem; font-weight: 600; margin: 0 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+.legal-body h3 { font-size: 1rem; font-weight: 600; margin: 20px 0 8px; }
+.legal-body p { color: var(--ink-2); line-height: 1.75; margin: 0 0 12px; }
+.legal-body ul { color: var(--ink-2); line-height: 1.75; padding-left: 20px; margin: 0 0 12px; }
+.legal-body li { margin-bottom: 6px; }
+.legal-body a { color: var(--terracota); text-decoration: underline; text-underline-offset: 3px; }
+.legal-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; font-size: 0.9rem; }
+.legal-table th, .legal-table td { padding: 9px 12px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
+.legal-table thead th { background: var(--bg-2); font-weight: 600; }
+.legal-table th { width: 38%; color: var(--ink-3); font-weight: 500; }
+.legal-table td { color: var(--ink-2); }
+.legal-updated { font-size: 0.82rem; color: var(--ink-3); margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line); }

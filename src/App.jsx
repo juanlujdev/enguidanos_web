@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useTweaks, TweaksPanel, TweakSection, TweakRadio, TweakSelect, TweakColor, TweakToggle } from './tweaks/TweaksPanel.jsx'
 import { Header, Footer } from './components/shared/index.js'
-import { Home, NaturalezaPage, PatrimonioPage, HistoriaPage, AgendaPage, AyuntamientoPage, OficinaTurismoPage, TurismoPage, TurismoDeportivoPage, RestaurantesPage, AlojamientosPage } from './components/pages/index.js'
+import { Home, NaturalezaPage, PatrimonioPage, HistoriaPage, AgendaPage, AyuntamientoPage, OficinaTurismoPage, TurismoPage, TurismoDeportivoPage, RestaurantesPage, AlojamientosPage, AvisoLegalPage, PrivacidadPage, AccesibilidadPage } from './components/pages/index.js'
 
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "primaryAccent": "#c2562a",
@@ -89,6 +89,9 @@ function App() {
       {page === "historia" && <HistoriaPage />}
       {page === "agenda" && <AgendaPage />}
       {page === "ayuntamiento" && <AyuntamientoPage navTarget={navTarget} />}
+      {page === "aviso-legal" && <AvisoLegalPage />}
+      {page === "privacidad" && <PrivacidadPage />}
+      {page === "accesibilidad" && <AccesibilidadPage />}
       <Footer setPage={goClear} navigate={navigate} />
 
       <TweaksPanel title="Tweaks">

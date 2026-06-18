@@ -42,7 +42,12 @@ function Footer({ setPage, navigate }) {
             <img src="assets/escudo-enguidanos.webp" alt="Escudo de Enguídanos" />
             <span>Ayuntamiento de Enguídanos · {new Date().getFullYear()}</span>
           </div>
-          <span>Diseño rediseñado con cariño · Aviso legal · Privacidad · Accesibilidad</span>
+          <span>
+            Diseño rediseñado con cariño ·{' '}
+            <a onClick={() => setPage("aviso-legal")} style={{cursor:'pointer'}}>Aviso legal</a> ·{' '}
+            <a onClick={() => setPage("privacidad")} style={{cursor:'pointer'}}>Privacidad</a> ·{' '}
+            <a onClick={() => setPage("accesibilidad")} style={{cursor:'pointer'}}>Accesibilidad</a>
+          </span>
         </div>
       </div>
     </footer>
