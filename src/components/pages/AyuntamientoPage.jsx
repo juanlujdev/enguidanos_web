@@ -32,7 +32,7 @@ function CorporacionView({ data }) {
     <div className="corp">
       <div className="corp-alcalde reveal">
         <div className="corp-alcalde-photo">
-          <img src={data.alcalde.foto} alt={data.alcalde.nombre} />
+          <img src={data.alcalde.foto} alt={data.alcalde.nombre} loading="lazy" />
         </div>
         <div className="corp-alcalde-info">
           <PartidoBadge partido={data.alcalde.partido} />
@@ -201,7 +201,7 @@ function AyuntamientoPage({ navTarget }) {
           <div className="saludo-grid">
             <div className="saludo-figure reveal">
               <div className="saludo-photo">
-                <img src="assets/alcalde-sergio-de-fez.webp" alt={ALCALDE.nombre} style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"center top"}} />
+                <img src="assets/alcalde-sergio-de-fez.webp" alt={ALCALDE.nombre} loading="lazy" style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"center top"}} />
               </div>
               <div className="saludo-plate">
                 <span className="mono">Alcaldía</span>
@@ -292,7 +292,7 @@ function AyuntamientoPage({ navTarget }) {
               </div>
             </div>
             <div className="photo-tinted" style={{height:480, borderRadius:"var(--r-lg)", overflow:"hidden", "--photo-a":"#9c8a6a", "--photo-b":"#5a4f3a"}}>
-              <img src="assets/fachada-ayuntamiento.webp" alt="Fachada del Ayuntamiento de Enguídanos" style={{width:"100%",height:"100%",objectFit:"cover"}} />
+              <img src="assets/fachada-ayuntamiento.webp" alt="Fachada del Ayuntamiento de Enguídanos" loading="lazy" style={{width:"100%",height:"100%",objectFit:"cover"}} />
             </div>
           </div>
         </div>

@@ -17,7 +17,7 @@ function Highlights({ setPage, navigate }) {
           {HIGHLIGHTS.map((h, i) => (
             <div key={h.id} className="highlight reveal" style={{transitionDelay:`${i*0.06}s`}} onClick={() => go(h.nav ? h.nav.page : "naturaleza", h.nav ? h.nav.target : null)}>
               {h.img ? (
-                <img className="highlight-img" src={h.img} alt={h.title} style={{width:"100%", height:"100%", objectFit:"cover"}} />
+                <img className="highlight-img" src={h.img} alt={h.title} loading="lazy" style={{width:"100%", height:"100%", objectFit:"cover"}} />
               ) : (
                 <div className="highlight-img photo-tinted" style={{"--photo-a": h.color.a, "--photo-b": h.color.b}}>
                   <div className="photo-label">FOTO · {h.title}</div>

@@ -74,7 +74,7 @@ function OficinaTurismoPage({ navTarget }) {
         <div className="container">
           <div className="ofi-intro">
             <div className="ofi-photo reveal">
-              <img src="assets/oficina-turismo.webp" alt="Interior de la Oficina de Turismo de Enguídanos" />
+              <img src="assets/oficina-turismo.webp" alt="Interior de la Oficina de Turismo de Enguídanos" loading="lazy" />
             </div>
             <div className="ofi-info reveal">
               <div className="eyebrow" style={{marginBottom:20}}>Información práctica</div>

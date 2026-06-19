@@ -124,7 +124,7 @@ function NaturalezaPage({ navTarget }) {
                     const r = RUTAS_INFO[c];
                     return (
                       <a key={c} className="nat-ruta-mini" href={r.pdf} title={`Descargar PDF · ${r.code} · ${r.name}`} onClick={(e) => downloadPdf(e, r.pdf, `${r.code} ${r.name}`)}>
-                        <img src={r.logo} alt={`Ruta ${r.code}`} />
+                        <img src={r.logo} alt={`Ruta ${r.code}`} loading="lazy" />
                       </a>
                     );
                   })}
@@ -171,7 +171,7 @@ function NaturalezaPage({ navTarget }) {
                     {p.rutas && (
                       <span className="pat-rutas-badges">
                         {p.rutas.map((c) => (
-                          <img key={c} src={RUTAS_INFO[c].logo} alt={`Ruta ${c}`} title={`Ruta ${RUTAS_INFO[c].code} · ${RUTAS_INFO[c].name}`} />
+                          <img key={c} src={RUTAS_INFO[c].logo} alt={`Ruta ${c}`} title={`Ruta ${RUTAS_INFO[c].code} · ${RUTAS_INFO[c].name}`} loading="lazy" />
                         ))}
                       </span>
                     )}
@@ -244,7 +244,7 @@ function NaturalezaPage({ navTarget }) {
                     const r = RUTAS_INFO[c];
                     return (
                       <a key={c} className="pat-modal-ruta" href={r.pdf} onClick={(e) => downloadPdf(e, r.pdf, `${r.code} ${r.name}`)}>
-                        <img src={r.logo} alt={`Ruta ${r.code}`} />
+                        <img src={r.logo} alt={`Ruta ${r.code}`} loading="lazy" />
                         <span className="pat-modal-ruta-info">
                           <strong className="mono">{r.code}</strong>
                           <span>{r.name}</span>

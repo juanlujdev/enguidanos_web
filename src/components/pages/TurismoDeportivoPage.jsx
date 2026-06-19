@@ -43,7 +43,7 @@ function TurismoDeportivoPage() {
               <article key={r.code} className="td-route reveal" style={{transitionDelay:`${(i%2)*0.06}s`}}>
                 <div className="td-route-main">
                   <div className="td-route-head">
-                    <img className="td-logo" src={r.logo} alt={`Logo ${r.code}`} />
+                    <img className="td-logo" src={r.logo} alt={`Logo ${r.code}`} loading="lazy" />
                     <div>
                       <div className="td-route-code mono">{r.code}</div>
                       <h3 className="td-route-name serif">{r.name}</h3>
@@ -80,7 +80,7 @@ function TurismoDeportivoPage() {
             <article className="td-empresa reveal">
               <div className="td-empresa-main">
                 <div className="td-empresa-head">
-                  <img className="td-empresa-logo" src="assets/turismo-deportivo/empresas/altair-logo.webp" alt="Logo Altair" />
+                  <img className="td-empresa-logo" src="assets/turismo-deportivo/empresas/altair-logo.webp" alt="Logo Altair" loading="lazy" />
                   <div>
                     <h3 className="td-empresa-name serif">Altair Turismo Activo Rural</h3>
                     <div className="td-empresa-lugar mono">Enguídanos · Río Cabriel</div>
@@ -98,14 +98,14 @@ function TurismoDeportivoPage() {
                 </div>
               </div>
               <div className="td-empresa-fotos">
-                <img src="assets/turismo-deportivo/empresas/altair-foto-1.webp" alt="Altair rafting" />
+                <img src="assets/turismo-deportivo/empresas/altair-foto-1.webp" alt="Altair rafting" loading="lazy" />
               </div>
             </article>
 
             <article className="td-empresa reveal" style={{transitionDelay:"0.06s"}}>
               <div className="td-empresa-main">
                 <div className="td-empresa-head">
-                  <img className="td-empresa-logo" src="assets/turismo-deportivo/empresas/vegaventura-logo.webp" alt="Logo Vegaventura" />
+                  <img className="td-empresa-logo" src="assets/turismo-deportivo/empresas/vegaventura-logo.webp" alt="Logo Vegaventura" loading="lazy" />
                   <div>
                     <h3 className="td-empresa-name serif">Vegaventura</h3>
                     <div className="td-empresa-lugar mono">Enguídanos · Cuenca</div>
@@ -124,7 +124,7 @@ function TurismoDeportivoPage() {
                 </div>
               </div>
               <div className="td-empresa-fotos">
-                <img src="assets/turismo-deportivo/empresas/vegaventura-foto-1.webp" alt="Vegaventura barranquismo" />
+                <img src="assets/turismo-deportivo/empresas/vegaventura-foto-1.webp" alt="Vegaventura barranquismo" loading="lazy" />
               </div>
             </article>
 

@@ -39,7 +39,7 @@ function Footer({ setPage, navigate }) {
         </div>
         <div className="footer-bottom">
           <div className="escudo">
-            <img src="assets/escudo-enguidanos.webp" alt="Escudo de Enguídanos" />
+            <img src="assets/escudo-enguidanos.webp" alt="Escudo de Enguídanos" loading="lazy" />
             <span>Ayuntamiento de Enguídanos · {new Date().getFullYear()}</span>
           </div>
           <span>
