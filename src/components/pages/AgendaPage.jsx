@@ -56,7 +56,7 @@ function EventoModal({ items, index, setIndex }) {
       <button className="agenda-modal-arrow next" onClick={(e) => { e.stopPropagation(); setIndex((index + 1) % items.length); }} aria-label="Siguiente">›</button>
       <div className="agenda-modal-inner" onClick={e => e.stopPropagation()}>
         <div className="agenda-modal-poster">
-          <img src={ev.poster} alt={`Cartel · ${ev.title}`} />
+          <img src={ev.poster || "assets/escudo-enguidanos.webp"} alt={`Cartel · ${ev.title}`} />
         </div>
         <div className="agenda-modal-info">
           <span className="agenda-modal-tipo"><span className="swatch" style={{background:c.color}}></span>{ev.subtipo || c.label}</span>
@@ -78,7 +78,9 @@ function EventoModal({ items, index, setIndex }) {
               </div>
             </div>
           )}
-          <a className="agenda-modal-dl" href={ev.poster} download={ev.poster.split("/").pop()} onClick={(e) => downloadImage(e, ev.poster, ev.title)}>Descargar cartel ↓</a>
+          {ev.poster && (
+            <a className="agenda-modal-dl" href={ev.poster} download={ev.poster.split("/").pop()} onClick={(e) => downloadImage(e, ev.poster, ev.title)}>Descargar cartel ↓</a>
+          )}
         </div>
       </div>
     </div>
