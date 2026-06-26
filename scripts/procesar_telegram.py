@@ -251,7 +251,8 @@ def classify_with_gemini(text: str, image_b64: str | None = None) -> dict:
     payload = {
         "model":           OPENROUTER_MODEL,
         "messages": [
-            {"role": "system", "content": _GEMINI_SYSTEM_PROMPT},
+            {"role": "system", "content": _GEMINI_SYSTEM_PROMPT +
+             f"\nAño actual: {datetime.date.today().year}. Si el cartel no indica el año explícitamente, asume {datetime.date.today().year}."},
             {"role": "user",   "content": user_content},
         ],
         "temperature":     0.1,
