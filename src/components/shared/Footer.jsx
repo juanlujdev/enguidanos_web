@@ -24,7 +24,7 @@ function Footer({ setPage, navigate }) {
               <li><a onClick={() => navigate("ayuntamiento", "area:tramites-formularios")}>Trámites</a></li>
               <li><a onClick={() => setPage("ayuntamiento")}>Tablón de anuncios</a></li>
               <li><a href="https://enguidanos.sedelectronica.es/info.0" target="_blank" rel="noopener noreferrer">Sede electrónica</a></li>
-              <li><a>Bandos</a></li>
+              <li><a onClick={() => navigate("ayuntamiento", "area:bandos")} style={{cursor:"pointer"}}>Bandos</a></li>
             </ul>
           </div>
           <div className="footer-col">
