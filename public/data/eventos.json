@@ -1,5 +1,20 @@
 [
   {
+    "id": "jornada-de-voluntariado-en-la-playeta-de-20260627",
+    "fecha_publicacion": "2026-06-26",
+    "tipo": "seccion",
+    "cat": "nat",
+    "title": "Jornada de Voluntariado en la Playeta de Víllora",
+    "desc": "Actividad de voluntariado para descubrir y proteger el río Cabriel.",
+    "date": "2026-06-27",
+    "when": "Sábado, de 9:30 a 11:30 h",
+    "place": "Playeta de Víllora",
+    "poster": "carteles/jornada-de-voluntariado-en-la-playeta-de-20260627.webp",
+    "pdf": null,
+    "subtipo": null,
+    "fuente": "telegram"
+  },
+  {
     "id": "fiesta-de-la-caza-y-medio-rural-enguidan-20260620",
     "fecha_publicacion": "2026-06-26",
     "tipo": "seccion",
