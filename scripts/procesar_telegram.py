@@ -255,7 +255,7 @@ def classify_with_gemini(text: str, image_b64: str | None = None) -> dict:
             {"role": "user",   "content": user_content},
         ],
         "temperature":     0.1,
-        "max_tokens":      500,
+        "max_tokens":      1000,
         "response_format": {"type": "json_object"},
     }
 
