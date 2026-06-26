@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "id": "pregunta-sobre-el-color-de-la-fresa",
+    "fecha_publicacion": "2026-06-26",
+    "tipo": "seccion",
+    "cat": "servicio",
+    "title": "Pregunta sobre el color de la fresa",
+    "desc": "El usuario pregunta por el color de una fruta, lo cual no es un evento municipal.",
+    "date": null,
+    "when": null,
+    "place": null,
+    "_photo_file_id": null,
+    "_pdf_file_id": null
+  }
+]
