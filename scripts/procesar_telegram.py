@@ -29,7 +29,7 @@ CARTELES_DIR = REPO_ROOT / "public" / "carteles"
 
 # ── Constantes ────────────────────────────────────────────────────────────────
 OPENROUTER_ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
-OPENROUTER_MODEL    = "google/gemini-2.5-flash"
+OPENROUTER_MODEL    = "google/gemma-4-26b-a4b-it:free"
 
 # Palabras clave de categoría (sin tildes; la normalización las elimina antes del lookup)
 CATEGORY_KEYWORDS: dict[str, str] = {
@@ -270,6 +270,7 @@ def classify_with_gemini(text: str, image_b64: str | None = None) -> dict:
     )
     resp.raise_for_status()
     raw = resp.json()["choices"][0]["message"]["content"]
+    raw = raw.replace("<pad>", "")  # ponytail: artefacto de tokenización de Gemma
     clean = strip_json_fences(raw)
     return json.loads(clean)
 
