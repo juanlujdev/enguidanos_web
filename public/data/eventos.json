@@ -1,5 +1,20 @@
 [
   {
+    "id": "escuela-de-verano-deportiva-20240713",
+    "fecha_publicacion": "2026-06-26",
+    "tipo": "seccion",
+    "cat": "form",
+    "title": "Escuela de Verano Deportiva",
+    "desc": "Programa de actividades deportivas para jóvenes de 12 a 16 años que incluye multideporte, acondicionamiento físico, fútbol y gimnasia.",
+    "date": "2024-07-13",
+    "when": "De lunes a viernes",
+    "place": "Ayuntamiento",
+    "poster": "carteles/escuela-de-verano-deportiva-20240713.webp",
+    "pdf": null,
+    "subtipo": null,
+    "fuente": "telegram"
+  },
+  {
     "date": "2026-01-16",
     "title": "Hogueras de San Antón 2026",
     "cat": "fest",
