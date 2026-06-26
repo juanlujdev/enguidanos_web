@@ -29,7 +29,7 @@ CARTELES_DIR = REPO_ROOT / "public" / "carteles"
 
 # ── Constantes ────────────────────────────────────────────────────────────────
 OPENROUTER_ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
-OPENROUTER_MODEL    = "google/gemini-2.0-flash-001"
+OPENROUTER_MODEL    = "google/gemini-2.5-flash"
 
 # Palabras clave de categoría (sin tildes; la normalización las elimina antes del lookup)
 CATEGORY_KEYWORDS: dict[str, str] = {
