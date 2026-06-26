@@ -360,6 +360,9 @@ def main() -> None:
 
     for update in updates:
         state["last_update_id"] = update["update_id"]
+        # Guardar state inmediatamente para no reprocesar este update si el script falla
+        save_json(STATE_FILE, state)
+
         msg = update.get("message") or update.get("channel_post")
         if not msg:
             continue
@@ -401,7 +404,11 @@ def main() -> None:
                 if mime == "application/pdf":
                     pdf_file_id = doc["file_id"]
 
-            classified = classify_with_gemini(text, image_b64)
+            try:
+                classified = classify_with_gemini(text, image_b64)
+            except Exception as e:
+                send_message(chat_id, f"⚠️ Error al clasificar con Gemini: {e}\nReenvía el mensaje para intentarlo de nuevo.")
+                continue
 
             today      = datetime.date.today().isoformat()
             event_date = classified.get("date")
