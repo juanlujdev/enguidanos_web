@@ -1,15 +1,15 @@
 [
   {
-    "id": "pregunta-sobre-el-color-de-la-fresa",
+    "id": "escuela-de-verano-deportiva-20240713",
     "fecha_publicacion": "2026-06-26",
     "tipo": "seccion",
-    "cat": "servicio",
-    "title": "Pregunta sobre el color de la fresa",
-    "desc": "El usuario pregunta por el color de una fruta, lo cual no es un evento municipal.",
-    "date": null,
-    "when": null,
-    "place": null,
-    "_photo_file_id": null,
+    "cat": "form",
+    "title": "Escuela de Verano Deportiva",
+    "desc": "Programa de actividades deportivas para jóvenes de 12 a 16 años que incluye multideporte, acondicionamiento físico, fútbol y gimnasia.",
+    "date": "2024-07-13",
+    "when": "De lunes a viernes",
+    "place": "Ayuntamiento",
+    "_photo_file_id": "AgACAgQAAxkBAAMXaj7wRLjUP-Xvrcv7bUIXGcGjZIgAAk8PaxuX9PlRtmlJVVvv9zoBAAMCAAN5AAM8BA",
     "_pdf_file_id": null
   }
 ]
