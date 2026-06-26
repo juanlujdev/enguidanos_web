@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import EVENTOS from '../../data/eventos.json'
+import { useEventos } from '../../hooks/useEventos.js'
 import AGENDA_CATS from '../../data/agenda-cats.json'
 import { parseEvDate, expandEventos } from '../../utils/eventos.js'
 import Icon from './Icon.jsx'
@@ -106,6 +106,7 @@ function Weather() {
 }
 
 function AgendaPreview({ setPage }) {
+  const eventos = useEventos()
   return (
     <section className="section agenda-preview">
       <div className="container">
@@ -119,8 +120,10 @@ function AgendaPreview({ setPage }) {
         <div className="agenda-split">
           <div className="events-list reveal">
             {(() => {
+              if (!eventos) return null;
               const todayISO = new Date().toISOString().slice(0, 10);
-              const sorted = expandEventos(EVENTOS).sort((a, b) => a.date.localeCompare(b.date));
+              const secciones = eventos.filter(e => e.tipo === "seccion");
+              const sorted = expandEventos(secciones).sort((a, b) => a.date.localeCompare(b.date));
               const upcoming = sorted.filter(e => e.date >= todayISO);        // próximos, ascendente
               const past = sorted.filter(e => e.date < todayISO).reverse();    // pasados recientes primero
               const list = [...upcoming, ...past].slice(0, 4);
