@@ -1,0 +1,525 @@
+[
+  {
+    "date": "2026-01-16",
+    "title": "Hogueras de San Antón 2026",
+    "cat": "fest",
+    "place": "Plaza Mayor de Enguídanos",
+    "when": "Viernes · 20:00 h",
+    "desc": "Hoguera tradicional de invierno para vecinos y visitantes.",
+    "poster": "assets/agenda/hogueras-san-anton.webp",
+    "subtipo": "Fiesta · Tradición",
+    "tipo": "seccion",
+    "id": "hogueras-de-san-anton-2026-20260116",
+    "fecha_publicacion": "2026-01-16",
+    "pdf": null
+  },
+  {
+    "date": "2026-01-17",
+    "title": "Misa de San Antón y bendición de animales",
+    "cat": "cult",
+    "place": "Iglesia Parroquial de Enguídanos",
+    "when": "Sábado · 17:00 h",
+    "desc": "Misa en honor a San Antón y bendición de los animales.",
+    "poster": "assets/agenda/misa-san-anton.webp",
+    "subtipo": "Cultura · Religioso",
+    "tipo": "seccion",
+    "id": "misa-de-san-anton-y-bendicion-de-animale-20260117",
+    "fecha_publicacion": "2026-01-17",
+    "pdf": null
+  },
+  {
+    "date": "2026-01-02",
+    "title": "Apertura de la Biblioteca Municipal",
+    "cat": "servicio",
+    "place": "Biblioteca Municipal de Enguídanos",
+    "when": "Lun a Vie · 10:00–13:30 y 16:00–19:30",
+    "desc": "Biblioteca municipal abierta para lectura, estudio y cultura.",
+    "poster": "assets/agenda/biblioteca-municipal.webp",
+    "subtipo": "Cultura · Servicio",
+    "tipo": "seccion",
+    "id": "apertura-de-la-biblioteca-municipal-20260102",
+    "fecha_publicacion": "2026-01-02",
+    "pdf": null
+  },
+  {
+    "date": "2026-02-02",
+    "title": "San Blas 2026 · Fiestas patronales",
+    "cat": "fest",
+    "place": "Varios puntos del pueblo",
+    "desc": "Fiestas de San Blas con misas, baile y comida popular.",
+    "poster": "assets/agenda/san-blas-2026.webp",
+    "dias": [
+      {
+        "date": "2026-02-02",
+        "label": "Lunes 2 de febrero",
+        "items": [
+          "17:00 · Misa de la Candelaria"
+        ]
+      },
+      {
+        "date": "2026-02-03",
+        "label": "Martes 3 de febrero",
+        "items": [
+          "12:00 · Misa en honor a San Blas",
+          "13:00 · Aperitivo popular (Casa de la Cultura)"
+        ]
+      },
+      {
+        "date": "2026-02-06",
+        "label": "Viernes 6 de febrero",
+        "items": [
+          "18:00 · Presentación del libro «Retales de tierra cosidos a mano» de María Elisa Beneite (Casa de la Cultura)"
+        ]
+      },
+      {
+        "date": "2026-02-07",
+        "label": "Sábado 7 de febrero",
+        "items": [
+          "10:00 · Ruta de senderismo a las Chorreras del Cabriel (salida desde la plaza)",
+          "11:30 · El show de Lolo y sus amigos (Casa de la Cultura)",
+          "19:00 · Degustación a cargo de la Asoc. de Mujeres",
+          "19:00 · Baile (Dúo Pura Vida + DJ)"
+        ]
+      },
+      {
+        "date": "2026-02-08",
+        "label": "Domingo 8 de febrero",
+        "items": [
+          "11:30 · Colchonetas en la calle Gran Vía",
+          "12:30 · Procesión",
+          "13:00 · Misa",
+          "13:30 · Subasta (patio de la iglesia)",
+          "14:00 · Comida en la plaza",
+          "16:00 · Concierto con el grupo Rondadores (Casa de la Cultura)"
+        ]
+      }
+    ],
+    "subtipo": "Fiesta patronal",
+    "tipo": "seccion",
+    "id": "san-blas-2026-fiestas-patronales-20260202",
+    "fecha_publicacion": "2026-02-02",
+    "pdf": null
+  },
+  {
+    "date": "2026-03-28",
+    "title": "Semana Santa 2026",
+    "cat": "cult",
+    "place": "Iglesia Parroquial y calles de Enguídanos",
+    "desc": "Procesiones, vía crucis y celebraciones de la Pasión, desde el Domingo de Ramos hasta la Resurrección.",
+    "poster": "assets/agenda/semana-santa.webp",
+    "dias": [
+      {
+        "date": "2026-03-28",
+        "label": "Sábado 28 de marzo · Víspera del Domingo de Ramos",
+        "items": [
+          "19:00 · Bendición de Ramos y celebración de la Eucaristía (el domingo no hay celebración)"
+        ]
+      },
+      {
+        "date": "2026-03-31",
+        "label": "Martes Santo · 31 de marzo",
+        "items": [
+          "18:00 · Celebración comunitaria de la penitencia. Eucaristía"
+        ]
+      },
+      {
+        "date": "2026-04-02",
+        "label": "Jueves Santo · 2 de abril",
+        "items": [
+          "21:00 · Celebración de la Cena del Señor",
+          "Procesión del Nazareno y la Dolorosa",
+          "00:00 · Hora Santa (adoración ante el Santísimo)"
+        ]
+      },
+      {
+        "date": "2026-04-03",
+        "label": "Viernes Santo · 3 de abril",
+        "items": [
+          "12:00 · Vía Crucis",
+          "19:30 · Celebración de la Pasión y Muerte del Señor",
+          "Procesión del Santo Entierro"
+        ]
+      },
+      {
+        "date": "2026-04-05",
+        "label": "Domingo de Resurrección · 5 de abril",
+        "items": [
+          "01:00 · Vigilia Pascual (madrugada del sábado al domingo)",
+          "11:00 · Procesión del Encuentro",
+          "Misa Pascual"
+        ]
+      }
+    ],
+    "subtipo": "Cultura · Religioso",
+    "tipo": "seccion",
+    "id": "semana-santa-2026-20260328",
+    "fecha_publicacion": "2026-03-28",
+    "pdf": null
+  },
+  {
+    "date": "2026-04-03",
+    "title": "Enguídanos Burguer Fest",
+    "cat": "gastro",
+    "place": "Frontón municipal de Enguídanos",
+    "desc": "Festival gastronómico de hamburguesas con La Vaca Lola y Galgo.",
+    "poster": "assets/agenda/burguer-fest.webp",
+    "dias": [
+      {
+        "date": "2026-04-03",
+        "label": "Viernes 3 de abril",
+        "items": [
+          "Hamburgueserías La Vaca Lola y Galgo · Frontón municipal"
+        ]
+      },
+      {
+        "date": "2026-04-04",
+        "label": "Sábado 4 de abril",
+        "items": [
+          "Hamburgueserías La Vaca Lola y Galgo · Frontón municipal"
+        ]
+      }
+    ],
+    "subtipo": "Gastronomía",
+    "tipo": "seccion",
+    "id": "enguidanos-burguer-fest-20260403",
+    "fecha_publicacion": "2026-04-03",
+    "pdf": null
+  },
+  {
+    "date": "2026-04-04",
+    "title": "Ruta de senderismo · Chorreras del Cabriel",
+    "cat": "nat",
+    "place": "Salida desde la plaza",
+    "when": "Sábado · 10:00 h",
+    "desc": "Ruta de senderismo guiada por las cascadas del Cabriel.",
+    "poster": "assets/agenda/ruta-chorreras-cabriel.webp",
+    "subtipo": "Naturaleza · Senderismo",
+    "tipo": "seccion",
+    "id": "ruta-de-senderismo-chorreras-del-cabriel-20260404",
+    "fecha_publicacion": "2026-04-04",
+    "pdf": null
+  },
+  {
+    "date": "2026-04-22",
+    "title": "Gymkana literaria y marcapáginas",
+    "cat": "cult",
+    "place": "Biblioteca de Enguídanos",
+    "when": "Miércoles · 17:30 h",
+    "desc": "Gymkana literaria y manualidades para crear marcapáginas personalizados.",
+    "poster": "assets/agenda/gymkana-literaria.webp",
+    "subtipo": "Cultura · Taller",
+    "tipo": "seccion",
+    "id": "gymkana-literaria-y-marcapaginas-20260422",
+    "fecha_publicacion": "2026-04-22",
+    "pdf": null
+  },
+  {
+    "date": "2026-04-27",
+    "title": "Jornada · Emprendimiento Femenino y Desarrollo Rural",
+    "cat": "form",
+    "place": "Casa de la Cultura · C/ Leonardo Luján, 2",
+    "when": "Lunes · 18:00–20:00 h",
+    "desc": "Jornada sobre la mujer empresaria, el desarrollo rural y la lucha contra la despoblación.",
+    "poster": "assets/agenda/jornada-emprendimiento.webp",
+    "subtipo": "Charla · Jornada",
+    "tipo": "seccion",
+    "id": "jornada-emprendimiento-femenino-y-desarr-20260427",
+    "fecha_publicacion": "2026-04-27",
+    "pdf": null
+  },
+  {
+    "date": "2026-04-30",
+    "title": "Programación de mayo · Mayos y Día de la Cruz",
+    "cat": "cult",
+    "place": "Patio de la iglesia y La Cruz",
+    "desc": "Canto de los Mayos con reparto de chocolate y celebración del Día de la Cruz.",
+    "poster": "assets/agenda/programacion-mayo.webp",
+    "dias": [
+      {
+        "date": "2026-04-30",
+        "label": "Jueves 30 de abril · Canto de los Mayos",
+        "items": [
+          "23:00 · Canto de los Mayos de la Virgen en el patio de la iglesia",
+          "Después, reparto de chocolate y magdalenas"
+        ]
+      },
+      {
+        "date": "2026-05-03",
+        "label": "Domingo 3 de mayo · Día de la Cruz",
+        "items": [
+          "18:00 · Misa en la iglesia",
+          "Después, subida a La Cruz y reparto de caridad"
+        ]
+      }
+    ],
+    "subtipo": "Cultura · Tradición",
+    "tipo": "seccion",
+    "id": "programacion-de-mayo-mayos-y-dia-de-la-c-20260430",
+    "fecha_publicacion": "2026-04-30",
+    "pdf": null
+  },
+  {
+    "date": "2026-05-13",
+    "title": "Cuentacuentos · La niña que se comía todos los cuentos",
+    "cat": "cult",
+    "place": "Casa de la Cultura de Enguídanos",
+    "when": "Miércoles · 17:30 h",
+    "desc": "Sesión de cuentacuentos infantil a cargo de la ludoteca y la biblioteca.",
+    "poster": "assets/agenda/cuentacuentos.webp",
+    "subtipo": "Cultura · Infantil",
+    "tipo": "seccion",
+    "id": "cuentacuentos-la-nina-que-se-comia-todos-20260513",
+    "fecha_publicacion": "2026-05-13",
+    "pdf": null
+  },
+  {
+    "date": "2026-05-15",
+    "title": "San Isidro 2026",
+    "cat": "fest",
+    "place": "Varios puntos · Abades, Casa de la Cultura y La Cruz",
+    "desc": "Concurso de surcos, comida, baile, misa, procesión y aperitivo.",
+    "poster": "assets/agenda/san-isidro-2026.webp",
+    "dias": [
+      {
+        "date": "2026-05-15",
+        "label": "Viernes 15 de mayo",
+        "items": [
+          "11:00 · Concurso de surcos (Abades)",
+          "14:30 · Comida (solo apuntados)",
+          "19:30 · Baile de jotas (Casa de la Cultura)"
+        ]
+      },
+      {
+        "date": "2026-05-16",
+        "label": "Sábado 16 de mayo",
+        "items": [
+          "8:00 · Decoración del santo",
+          "12:00 · Misa y procesión",
+          "13:00 · Aperitivo en La Cruz"
+        ]
+      }
+    ],
+    "subtipo": "Fiesta · Tradición",
+    "tipo": "seccion",
+    "id": "san-isidro-2026-20260515",
+    "fecha_publicacion": "2026-05-15",
+    "pdf": null
+  },
+  {
+    "date": "2026-05-19",
+    "title": "Capacitación Digital · La IA para la vida cotidiana",
+    "cat": "form",
+    "place": "Biblioteca de Enguídanos",
+    "desc": "Curso de competencias digitales sobre asistencia inteligente (IA) para mayores de 55 años.",
+    "poster": "assets/agenda/capacitacion-digital.webp",
+    "dias": [
+      {
+        "date": "2026-05-19",
+        "label": "Martes 19 de mayo",
+        "items": [
+          "16:30–19:30 · La IA para la vida cotidiana · Mi asistente inteligente"
+        ]
+      },
+      {
+        "date": "2026-05-20",
+        "label": "Miércoles 20 de mayo",
+        "items": [
+          "16:30–19:30 · La IA para la vida cotidiana · Mi asistente inteligente"
+        ]
+      },
+      {
+        "date": "2026-05-22",
+        "label": "Viernes 22 de mayo",
+        "items": [
+          "16:30–19:30 · La IA para la vida cotidiana · Mi asistente inteligente"
+        ]
+      },
+      {
+        "date": "2026-05-26",
+        "label": "Martes 26 de mayo",
+        "items": [
+          "16:30–19:30 · La IA para la vida cotidiana · Mi asistente inteligente"
+        ]
+      },
+      {
+        "date": "2026-05-27",
+        "label": "Miércoles 27 de mayo",
+        "items": [
+          "16:30–19:30 · La IA para la vida cotidiana · Mi asistente inteligente"
+        ]
+      }
+    ],
+    "subtipo": "Formación · Tecnología",
+    "tipo": "seccion",
+    "id": "capacitacion-digital-la-ia-para-la-vida--20260519",
+    "fecha_publicacion": "2026-05-19",
+    "pdf": null
+  },
+  {
+    "date": "2026-06-03",
+    "title": "Recogida de Electrodomésticos",
+    "cat": "servicio",
+    "place": "Punto La Báscula Municipal",
+    "when": "Miércoles · 9:00 h",
+    "desc": "Dale una segunda vida a tus electrodomésticos y cuidemos nuestro entorno. El miércoles 3 de junio, a las 9:00, en el punto de recogida de La Báscula Municipal.",
+    "poster": "assets/agenda/recogida-electrodomesticos.webp",
+    "subtipo": "Medio ambiente · Reciclaje",
+    "tipo": "seccion",
+    "id": "recogida-de-electrodomesticos-20260603",
+    "fecha_publicacion": "2026-06-03",
+    "pdf": null
+  },
+  {
+    "date": "2026-07-01",
+    "title": "Apertura de la Oficina de Turismo",
+    "cat": "servicio",
+    "place": "Calle Virgen nº 3, Enguídanos",
+    "when": "A partir del 1 de julio",
+    "desc": "Desde el 1 de julio, la Calle Virgen nº 3 acoge la nueva sede: mapas y folletos oficiales, información sobre comercio, alojamiento y hostelería, rutas de senderismo y visitas guiadas al patrimonio. Toda la información también, actualizada, en enguidanos.es.",
+    "poster": "assets/agenda/oficina-turismo.webp",
+    "subtipo": "Turismo · Servicio",
+    "tipo": "seccion",
+    "id": "apertura-de-la-oficina-de-turismo-20260701",
+    "fecha_publicacion": "2026-07-01",
+    "pdf": null
+  },
+  {
+    "date": "2026-07-01",
+    "title": "Escuela de Verano 2026",
+    "cat": "servicio",
+    "place": "Inscripciones en la Ludoteca Municipal",
+    "when": "A partir del 1 de julio",
+    "desc": "El Ayuntamiento organiza una nueva edición de la Escuela de Verano para los más pequeños, a partir del 1 de julio. Horarios, actividades, plazos e inscripciones en la Ludoteca Municipal de Enguídanos.",
+    "poster": "assets/agenda/escuela-verano.webp",
+    "subtipo": "Infantil · Juventud",
+    "tipo": "seccion",
+    "id": "escuela-de-verano-2026-20260701",
+    "fecha_publicacion": "2026-07-01",
+    "pdf": null
+  },
+  {
+    "date": "2026-08-08",
+    "title": "Finde de las Peñas",
+    "cat": "fest",
+    "place": "Enguídanos",
+    "desc": "Fin de semana de las peñas, antesala de las fiestas de San Roque.",
+    "poster": "assets/agenda/san-roque-2026.webp",
+    "dias": [
+      {
+        "date": "2026-08-08",
+        "label": "Sábado 8 de agosto",
+        "items": []
+      },
+      {
+        "date": "2026-08-09",
+        "label": "Domingo 9 de agosto",
+        "items": []
+      }
+    ],
+    "subtipo": "Fiesta · Peñas",
+    "tipo": "seccion",
+    "id": "finde-de-las-penas-20260808",
+    "fecha_publicacion": "2026-08-08",
+    "pdf": null
+  },
+  {
+    "date": "2026-08-12",
+    "title": "Fiestas de San Roque 2026",
+    "cat": "fest",
+    "place": "Enguídanos · Cuenca",
+    "desc": "Fiestas patronales de San Roque: verbenas, actos populares y celebraciones por todo el pueblo.",
+    "poster": "assets/agenda/san-roque-2026.webp",
+    "dias": [
+      {
+        "date": "2026-08-12",
+        "label": "Miércoles 12 de agosto",
+        "items": []
+      },
+      {
+        "date": "2026-08-13",
+        "label": "Jueves 13 de agosto",
+        "items": []
+      },
+      {
+        "date": "2026-08-14",
+        "label": "Viernes 14 de agosto",
+        "items": []
+      },
+      {
+        "date": "2026-08-15",
+        "label": "Sábado 15 de agosto",
+        "items": []
+      },
+      {
+        "date": "2026-08-16",
+        "label": "Domingo 16 de agosto",
+        "items": []
+      }
+    ],
+    "subtipo": "Fiesta patronal",
+    "tipo": "seccion",
+    "id": "fiestas-de-san-roque-2026-20260812",
+    "fecha_publicacion": "2026-08-12",
+    "pdf": null
+  },
+  {
+    "id": "voto-por-correo-elecciones-generales-26--20160601",
+    "fecha_publicacion": "2016-06-01",
+    "tipo": "bando",
+    "cat": null,
+    "title": "Voto por correo · Elecciones Generales 26 de junio de 2016",
+    "desc": "Se comunica que se puede solicitar el voto por correo para las Elecciones Generales del 26 de junio de 2016.",
+    "date": null,
+    "when": null,
+    "place": null,
+    "poster": null,
+    "pdf": null,
+    "subtipo": null,
+    "fuente": "historico"
+  },
+  {
+    "id": "exposicion-del-censo-listas-electorales-20160509",
+    "fecha_publicacion": "2016-05-09",
+    "tipo": "bando",
+    "cat": null,
+    "title": "Exposición del censo · Listas electorales",
+    "desc": "Se comunica que las listas del censo electoral están expuestas al público toda la semana (del 09/05 al 16/05). Aquella persona que quiera consultarla y efectuar las reclamaciones oportunas podrá hacerlo dentro del horario de oficinas de nuestro Ayuntamiento.",
+    "date": null,
+    "when": null,
+    "place": null,
+    "poster": null,
+    "pdf": null,
+    "subtipo": null,
+    "fuente": "historico"
+  },
+  {
+    "id": "servicio-de-informacion-al-alquiler-20200101",
+    "fecha_publicacion": "2020-01-01",
+    "tipo": "bando",
+    "cat": null,
+    "title": "Servicio de información al alquiler",
+    "desc": "El Ayuntamiento de Enguídanos activa un servicio de difusión de las viviendas en alquiler (no vacacional). Todos los propietarios interesados en alquilar una vivienda en el municipio pueden pasar por el Ayuntamiento para rellenar un formulario, o enviar los datos a info@enguidanos.es. Tras ser revisadas, las propuestas se publicarán en la app municipal de forma gratuita. Información requerida: Tipo de inmueble, Dirección, Teléfono, Correo electrónico, Nº de habitaciones, Nº de aseos, Superficie, Precio, Fotos.",
+    "date": null,
+    "when": null,
+    "place": null,
+    "poster": null,
+    "pdf": null,
+    "subtipo": null,
+    "fuente": "historico"
+  },
+  {
+    "id": "tenencia-de-perros-obligaciones-de-los-p-20120207",
+    "fecha_publicacion": "2012-02-07",
+    "tipo": "bando",
+    "cat": null,
+    "title": "Tenencia de perros · Obligaciones de los propietarios",
+    "desc": "Se comunica a los propietarios de perros que tienen la obligación de llevarlos atados en toda la vía pública y que está totalmente prohibido que depositen sus heces en la vía pública, parques o zonas verdes urbanas, estando obligados los propietarios a recoger en bolsas las deposiciones y depositarlas en los contenedores. Se convoca a todos los propietarios de perros el viernes 10 de febrero a las 12h en la Casa de la Cultura a una charla informativa para explicar la nueva ordenanza integral aprobada por el Ayuntamiento de Enguídanos donde se regulan las obligaciones de los propietarios de perros en el municipio. Posteriormente se llevará a cabo una inspección en todo el casco urbano y se multará a aquellas personas que no cumplan con estas obligaciones.",
+    "date": null,
+    "when": null,
+    "place": null,
+    "poster": null,
+    "pdf": "assets/ayuntamiento/bandos/bando-perros.pdf",
+    "subtipo": null,
+    "fuente": "historico"
+  }
+]

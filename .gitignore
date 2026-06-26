@@ -25,3 +25,4 @@ __pycache__/
 
 # Claude Code — configuración local, no subir al repo
 .claude/
+docs/

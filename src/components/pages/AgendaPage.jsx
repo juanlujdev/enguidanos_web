@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { PageHeroMedia, Icon } from '../shared/index.js'
-import EVENTOS from '../../data/eventos.json'
+import { useEventos } from '../../hooks/useEventos.js'
 import AGENDA_CATS from '../../data/agenda-cats.json'
 import { parseEvDate, expandEventos, MES_ABBR } from '../../utils/eventos.js'
 
@@ -56,10 +56,10 @@ function EventoModal({ items, index, setIndex }) {
       <button className="agenda-modal-arrow next" onClick={(e) => { e.stopPropagation(); setIndex((index + 1) % items.length); }} aria-label="Siguiente">›</button>
       <div className="agenda-modal-inner" onClick={e => e.stopPropagation()}>
         <div className="agenda-modal-poster">
-          <img src={ev.poster} alt={`Cartel · ${ev.title}`} />
+          <img src={ev.poster || "assets/escudo-enguidanos.webp"} alt={`Cartel · ${ev.title}`} />
         </div>
         <div className="agenda-modal-info">
-          <span className="agenda-modal-tipo"><span className="swatch" style={{background:c.color}}></span>{ev.tipo}</span>
+          <span className="agenda-modal-tipo"><span className="swatch" style={{background:c.color}}></span>{ev.subtipo || c.label}</span>
           <h3 className="serif">{ev.title}</h3>
           {ev.dayLabel && <div className="agenda-modal-daylabel">{ev.dayLabel}</div>}
           <p className="agenda-modal-desc">{ev.desc}</p>
@@ -78,7 +78,9 @@ function EventoModal({ items, index, setIndex }) {
               </div>
             </div>
           )}
-          <a className="agenda-modal-dl" href={ev.poster} download={ev.poster.split("/").pop()} onClick={(e) => downloadImage(e, ev.poster, ev.title)}>Descargar cartel ↓</a>
+          {ev.poster && (
+            <a className="agenda-modal-dl" href={ev.poster} download={ev.poster.split("/").pop()} onClick={(e) => downloadImage(e, ev.poster, ev.title)}>Descargar cartel ↓</a>
+          )}
         </div>
       </div>
     </div>
@@ -86,6 +88,7 @@ function EventoModal({ items, index, setIndex }) {
 }
 
 function AgendaPage() {
+  const eventos = useEventos()
   const [filter, setFilter] = useState("all");
   const [month, setMonth] = useState(new Date()); // arranca en el mes actual
   const [openEv, setOpenEv] = useState(null); // índice (dentro de `displayList`) del evento abierto
@@ -93,7 +96,16 @@ function AgendaPage() {
   const [visible, setVisible] = useState(6);    // cuántos se muestran (botón "Ver más")
   useEffect(() => { setVisible(6); setOpenEv(null); }, [filter, tab]); // reinicia al cambiar filtro o pestaña
 
-  const allRows = expandEventos(EVENTOS);
+  if (!eventos) return (
+    <main>
+      <div style={{textAlign:"center",padding:"120px 0",color:"var(--ink-3)",fontFamily:"var(--font-mono)",fontSize:13,letterSpacing:"0.1em",textTransform:"uppercase"}}>
+        Cargando agenda…
+      </div>
+    </main>
+  );
+
+  const secciones = (eventos || []).filter(e => e.tipo === "seccion");
+  const allRows = expandEventos(secciones);
   const base = filter === "all" ? allRows : allRows.filter(e => e.cat === filter);
   const todayISO = new Date().toISOString().slice(0, 10);
   const upcoming = [...base].filter(e => e.date >= todayISO).sort((a, b) => a.date.localeCompare(b.date)); // próximos: el más cercano primero

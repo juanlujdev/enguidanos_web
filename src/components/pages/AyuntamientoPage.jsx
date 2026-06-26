@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { useEventos } from '../../hooks/useEventos.js'
 import AREAS_CONTENT from '../../data/areas-content.json'
 import TRAMITES from '../../data/tramites.json'
 import ALCALDE from '../../data/alcalde.json'
@@ -114,30 +115,56 @@ function PlenosView({ data }) {
   );
 }
 
-function BandosView({ data }) {
+function BandosView() {
+  const eventos = useEventos()
+  const bandos = eventos
+    ? [...eventos]
+        .filter(e => e.tipo === "bando")
+        .sort((a, b) => (b.fecha_publicacion || "").localeCompare(a.fecha_publicacion || ""))
+    : null
+
+  if (!bandos) return (
+    <div style={{padding:"48px 0",textAlign:"center",color:"var(--ink-3)",fontFamily:"var(--font-mono)",fontSize:12,letterSpacing:"0.12em",textTransform:"uppercase"}}>
+      Cargando bandos…
+    </div>
+  )
+
+  if (bandos.length === 0) return (
+    <div className="agenda-empty">No hay bandos publicados por el momento.</div>
+  )
+
   return (
     <div className="bandos">
-      {data.bandos.map((b, i) => (
-        <article key={i} className="bando reveal" style={{transitionDelay:`${i*0.05}s`}}>
-          <div className="bando-mark mono">Bando</div>
-          <h3 className="serif">{b.title}</h3>
-          {b.cuerpo.map((p, j) => <p key={j}>{p}</p>)}
-          {b.campos && (
-            <ul className="bando-campos">
-              {b.campos.map((c, j) => <li key={j}>{c}</li>)}
-            </ul>
-          )}
-          {b.fecha && <div className="bando-fecha mono">{b.fecha}</div>}
-          <div className="bando-firma">{b.cargo || "El Alcalde"}<span>{b.firmante || data.firma}</span></div>
-          {b.pdf && (
-            <a className="bando-pdf" href={b.pdf} download={b.title.replace(/[^\w]+/g,"-").slice(0,60)+".pdf"} onClick={(e) => downloadPdf(e, b.pdf, b.title.slice(0,60))}>
-              Descargar bando oficial <span className="mono">PDF&nbsp;↓</span>
-            </a>
-          )}
+      {bandos.map((b, i) => (
+        <article key={b.id || i} className="bando reveal" style={{transitionDelay:`${i*0.05}s`}}>
+          <div style={{display:"flex",gap:24,alignItems:"flex-start"}}>
+            <img
+              src={b.poster || "assets/escudo-enguidanos.webp"}
+              alt={b.title}
+              loading="lazy"
+              style={{width:80,height:80,objectFit:"contain",flexShrink:0,borderRadius:"var(--r-sm)"}}
+            />
+            <div style={{flex:1}}>
+              <div className="bando-mark mono">Bando</div>
+              <h3 className="serif">{b.title}</h3>
+              <p>{b.desc}</p>
+              {b.fecha_publicacion && (
+                <div className="bando-fecha mono">{b.fecha_publicacion}</div>
+              )}
+              {b.pdf && (
+                <a className="bando-pdf" href={b.pdf}
+                  download={b.title.replace(/[^\w]+/g,"-").slice(0,60)+".pdf"}
+                  onClick={(e) => downloadPdf(e, b.pdf, b.title.slice(0,60))}>
+                  Descargar bando oficial <span className="mono">PDF&nbsp;↓</span>
+                </a>
+              )}
+            </div>
+          </div>
         </article>
       ))}
+      <p className="ord-note">Bandos y comunicaciones oficiales de la Alcaldía de Enguídanos. Recopilación no oficial; fuente: <a href="https://www.facebook.com/AyuntamientodeEnguidanos/?locale=es_ES" target="_blank" rel="noopener noreferrer">Facebook oficial del Ayuntamiento</a>.</p>
     </div>
-  );
+  )
 }
 
 function AreaDetail({ slug, onBack }) {
@@ -163,7 +190,7 @@ function AreaDetail({ slug, onBack }) {
           {slug === "ordenanzas-municipales" && <OrdenanzasFiscalesView data={data} />}
           {slug === "perfil-contratante" && <OrdenanzasFiscalesView data={data} />}
           {slug === "tramites-formularios" && <OrdenanzasFiscalesView data={data} />}
-          {slug === "bandos" && <BandosView data={data} />}
+          {slug === "bandos" && <BandosView />}
         </div>
       </section>
     </main>
