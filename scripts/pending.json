@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "id": "escuela-de-natacion-20240629",
+    "fecha_publicacion": "2026-06-26",
+    "tipo": "seccion",
+    "cat": "form",
+    "title": "Escuela de Natación",
+    "desc": "Curso de natación para niños de 3 a 12 años en la Piscina Municipal Enguidanos.",
+    "date": "2024-06-29",
+    "when": "De 29 de junio al 8 de agosto. Horario de 20:00 a 21:00 a partir del 1 de julio.",
+    "place": "Piscina Municipal Enguidanos",
+    "_photo_file_id": "AgACAgQAAxkBAAM5aj8HH4bZYjTMuvtYCVVSnCYWk9cAAmEPaxuX9PlRicz6QxFigw4BAAMCAAN5AAM8BA",
+    "_pdf_file_id": null
+  }
+]
