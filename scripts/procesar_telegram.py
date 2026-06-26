@@ -380,7 +380,7 @@ def main() -> None:
             or msg.get("forward_from_chat")
         )
         has_media = bool(msg.get("photo") or msg.get("document"))
-        is_new_publication = is_forward or has_media
+        is_new_publication = is_forward or has_media or (not pending and text.strip())
 
         if is_new_publication:
             # Clasificar con Gemini
