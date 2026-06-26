@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
 procesar_telegram.py - Bot de Telegram para gestión de eventos de Enguídanos.
-Clasificación automática con Gemini Flash y aprobación manual del administrador.
+Clasificación automática con IA (vía OpenRouter) y aprobación manual del administrador.
 
 API keys se leen EXCLUSIVAMENTE de variables de entorno:
-  TELEGRAM_BOT_TOKEN, TELEGRAM_OWNER_ID, GEMINI_API_KEY
+  TELEGRAM_BOT_TOKEN, TELEGRAM_OWNER_ID, OPENROUTER_API_KEY
 """
 
 import os
@@ -28,10 +28,8 @@ EVENTOS_FILE = REPO_ROOT / "public" / "data" / "eventos.json"
 CARTELES_DIR = REPO_ROOT / "public" / "carteles"
 
 # ── Constantes ────────────────────────────────────────────────────────────────
-GEMINI_ENDPOINT = (
-    "https://generativelanguage.googleapis.com/v1beta"
-    "/models/gemini-2.0-flash:generateContent"
-)
+OPENROUTER_ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
+OPENROUTER_MODEL    = "google/gemini-2.0-flash-001"
 
 # Palabras clave de categoría (sin tildes; la normalización las elimina antes del lookup)
 CATEGORY_KEYWORDS: dict[str, str] = {
@@ -239,36 +237,39 @@ tipo=bando para bandos municipales/avisos oficiales; tipo=seccion para el resto.
 
 
 def classify_with_gemini(text: str, image_b64: str | None = None) -> dict:
-    """Llama a Gemini Flash para clasificar un mensaje reenviado. Devuelve dict."""
-    api_key = os.environ["GEMINI_API_KEY"]
+    """Llama a la IA (vía OpenRouter) para clasificar un mensaje reenviado. Devuelve dict."""
+    api_key = os.environ["OPENROUTER_API_KEY"]
 
-    parts = []
     if image_b64:
-        parts.append({
-            "inlineData": {
-                "mimeType": "image/webp",
-                "data": image_b64,
-            }
-        })
-    parts.append({"text": text or "(sin texto)"})
+        user_content = [
+            {"type": "image_url", "image_url": {"url": f"data:image/webp;base64,{image_b64}"}},
+            {"type": "text", "text": text or "(sin texto)"},
+        ]
+    else:
+        user_content = text or "(sin texto)"
 
     payload = {
-        "system_instruction": {"parts": [{"text": _GEMINI_SYSTEM_PROMPT}]},
-        "contents": [{"role": "user", "parts": parts}],
-        "generationConfig": {"temperature": 0.1},
+        "model":           OPENROUTER_MODEL,
+        "messages": [
+            {"role": "system", "content": _GEMINI_SYSTEM_PROMPT},
+            {"role": "user",   "content": user_content},
+        ],
+        "temperature":     0.1,
+        "max_tokens":      500,
+        "response_format": {"type": "json_object"},
     }
 
     resp = requests.post(
-        GEMINI_ENDPOINT,
+        OPENROUTER_ENDPOINT,
         headers={
-            "X-goog-api-key": api_key,
-            "Content-Type": "application/json",
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type":  "application/json",
         },
         json=payload,
         timeout=30,
     )
     resp.raise_for_status()
-    raw = resp.json()["candidates"][0]["content"]["parts"][0]["text"]
+    raw = resp.json()["choices"][0]["message"]["content"]
     clean = strip_json_fences(raw)
     return json.loads(clean)
 
@@ -407,7 +408,7 @@ def main() -> None:
             try:
                 classified = classify_with_gemini(text, image_b64)
             except Exception as e:
-                send_message(chat_id, f"⚠️ Error al clasificar con Gemini: {e}\nReenvía el mensaje para intentarlo de nuevo.")
+                send_message(chat_id, f"⚠️ Error al clasificar con la IA: {e}\nReenvía el mensaje para intentarlo de nuevo.")
                 continue
 
             today      = datetime.date.today().isoformat()
