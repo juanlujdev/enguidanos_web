@@ -367,6 +367,11 @@ def main() -> None:
         chat_id = msg["chat"]["id"]
         text    = msg.get("text", "") or msg.get("caption", "") or ""
 
+        # Verificar que el mensaje viene del propietario
+        sender_id = (msg.get("from") or {}).get("id")
+        if sender_id is None or str(sender_id) != owner_id:
+            continue
+
         # Determinar si es un mensaje reenviado/con media o una respuesta del propietario
         is_forward = bool(
             msg.get("forward_from")
