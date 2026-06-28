@@ -1,5 +1,20 @@
 [
   {
+    "id": "dia-internacional-del-orgullo-lgtbi-20260628",
+    "fecha_publicacion": "2026-06-28",
+    "tipo": "seccion",
+    "cat": "cult",
+    "title": "Día Internacional del Orgullo LGTBI",
+    "desc": "Celebración de la diversidad, el respeto y la igualdad en el marco del Día Internacional del Orgullo LGTBI.",
+    "date": "2026-06-28",
+    "when": "28 de junio",
+    "place": "Enguídanos",
+    "poster": "carteles/dia-internacional-del-orgullo-lgtbi-20260628.webp",
+    "pdf": null,
+    "subtipo": null,
+    "fuente": "telegram"
+  },
+  {
     "id": "bebeteca-y-escuela-de-verano-20260701",
     "fecha_publicacion": "2026-06-27",
     "tipo": "seccion",
