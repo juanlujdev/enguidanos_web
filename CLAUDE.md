@@ -65,3 +65,47 @@ Leaflet + MarkerCluster cargados desde unpkg. Los POIs están en el array `POIS`
 ### Assets
 
 Imágenes en `assets/` organizadas por sección (`agenda/`, `alojamientos/`, `ayuntamiento/`, `historia/`). PDFs de ordenanzas y plenos en `assets/ayuntamiento/`.
+
+---
+
+## Bot de Telegram — agenda automática
+
+El bot clasifica eventos enviados por foto/texto al bot de Telegram y los publica en la web sin intervención manual (salvo confirmar con SI/NO).
+
+### Flujo completo
+
+```
+Telegram → Cloudflare Worker → GitHub Actions → procesar_telegram.py → eventos.json → Deploy
+```
+
+### Ficheros clave
+
+```
+scripts/procesar_telegram.py   ← lógica principal; modos --mode scan|confirm
+scripts/test_script.py         ← tests de funciones puras (44 tests)
+scripts/pending.json           ← cola de eventos pendientes de confirmar
+scripts/state.json             ← último update_id procesado
+cloudflare/worker.js           ← webhook receiver; despacha a GitHub Actions
+.github/workflows/agenda-scan.yml    ← clasifica mensajes nuevos con IA
+.github/workflows/agenda-confirm.yml ← procesa SI/NO del propietario
+.github/workflows/deploy.yml         ← se activa tras scan o confirm
+```
+
+### Credenciales y configuración externa
+
+- **Cloudflare Worker**: `enguidanos-telegram-bot.juanilloxyz.workers.dev`
+- **Cuenta Cloudflare**: juanilloxyz@gmail.com
+- **GitHub repo**: `juanlujdev/enguidanos_web` (el usuario GitHub es `juanlujdev`, NO `lujanlopezjuan`)
+- **Secrets del Worker** (Cloudflare → Settings → Variables and Secrets):
+  - `GH_PAT` — Personal Access Token de GitHub con permiso Actions R/W (debe incluir el prefijo `github_pat_`)
+  - `GH_REPO` — `juanlujdev/enguidanos_web`
+  - `TELEGRAM_OWNER_ID` — ID numérico del propietario en Telegram
+  - `TELEGRAM_SECRET_TOKEN` — token hexadecimal para validar el webhook
+
+### Gotchas importantes
+
+- El usuario GitHub es `juanlujdev`, no `lujanlopezjuan` (que es solo el nombre en git config)
+- El `GH_PAT` en Cloudflare **debe incluir el prefijo `github_pat_`** completo — sin él, GitHub devuelve 401
+- La API de GitHub requiere header `User-Agent` — ya incluido en `cloudflare/worker.js`
+- Telegram bloquea `getUpdates` (error 409) mientras el webhook esté activo; el script lo maneja
+- Al actualizar variables en Cloudflare con versioning activado, la nueva versión se despliega automáticamente
