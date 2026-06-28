@@ -350,139 +350,182 @@ def process_confirmed_item(item: dict, chat_id) -> None:
 
 
 # ══════════════════════════════════════════════════════════════════════════════
+# Detección de tipo de mensaje
+# ══════════════════════════════════════════════════════════════════════════════
+
+def is_new_event(msg: dict, pending: list) -> bool:
+    """True si el mensaje es un evento nuevo (foto, reenvío o texto libre sin pendientes)."""
+    text = msg.get("text", "") or msg.get("caption", "") or ""
+    is_forward = bool(
+        msg.get("forward_from")
+        or msg.get("forward_origin")
+        or msg.get("forward_date")
+        or msg.get("forward_from_chat")
+    )
+    has_media = bool(msg.get("photo") or msg.get("document"))
+    return is_forward or has_media or (not pending and bool(text.strip()))
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# Procesadores por modo
+# ══════════════════════════════════════════════════════════════════════════════
+
+def _process_scan(msg: dict, pending: list) -> None:
+    """Modo scan: clasifica mensaje nuevo con IA y añade a pending."""
+    if not is_new_event(msg, pending):
+        return
+
+    text          = msg.get("text", "") or msg.get("caption", "") or ""
+    chat_id       = msg["chat"]["id"]
+    image_b64     = None
+    photo_file_id = None
+    pdf_file_id   = None
+
+    if msg.get("photo"):
+        photo_file_id = msg["photo"][-1]["file_id"]
+        raw = download_telegram_file(photo_file_id)
+        webp = image_to_webp(raw)
+        image_b64 = base64.b64encode(webp).decode()
+
+    if msg.get("document"):
+        doc  = msg["document"]
+        mime = doc.get("mime_type", "")
+        if mime == "application/pdf":
+            pdf_file_id = doc["file_id"]
+
+    try:
+        classified = classify_with_gemini(text, image_b64)
+    except Exception as e:
+        send_message(chat_id, f"⚠️ Error al clasificar con la IA: {e}\nReenvía el mensaje para intentarlo de nuevo.")
+        return
+
+    today      = datetime.date.today().isoformat()
+    event_date = classified.get("date")
+    item = {
+        "id":                build_id(classified.get("title", "evento"), event_date),
+        "fecha_publicacion": today,
+        "tipo":              classified.get("tipo", "seccion"),
+        "cat":               classified.get("cat"),
+        "title":             classified.get("title", ""),
+        "desc":              classified.get("desc", ""),
+        "date":              event_date,
+        "when":              classified.get("when"),
+        "place":             classified.get("place"),
+        "_photo_file_id":    photo_file_id,
+        "_pdf_file_id":      pdf_file_id,
+    }
+
+    was_empty = len(pending) == 0
+    pending.append(item)
+
+    if was_empty:
+        send_message(chat_id, format_confirmation_message(item))
+    else:
+        pos = len(pending)
+        send_message(chat_id, f"Añadido a la cola (posición {pos})")
+
+
+def _process_confirm(msg: dict, pending: list) -> None:
+    """Modo confirm: procesa respuesta del propietario (SI/NO/categoría)."""
+    if is_new_event(msg, pending):
+        return  # en modo confirm, ignorar fotos/texto libre
+
+    text    = msg.get("text", "") or msg.get("caption", "") or ""
+    chat_id = msg["chat"]["id"]
+
+    if not pending:
+        send_message(chat_id, "No hay eventos pendientes en la cola.")
+        return
+
+    action  = parse_reply(text)
+    current = pending[0]
+
+    if action is None:
+        send_message(
+            chat_id,
+            "No entendí la respuesta. Usa: *SI*, *NO*, *BANDO*, o una categoría "
+            "(FIESTAS, CULTURA, NATURALEZA, GASTRONOMIA, FORMACION, SERVICIOS).",
+        )
+        return
+
+    verb, cat_key = action
+
+    if verb == "yes":
+        process_confirmed_item(current, chat_id)
+        pending.pop(0)
+        send_message(chat_id, "✅ Publicado.")
+    elif verb == "no":
+        pending.pop(0)
+        send_message(chat_id, "❌ Descartado.")
+    elif verb == "override":
+        current["cat"]  = cat_key
+        current["tipo"] = "seccion"
+        process_confirmed_item(current, chat_id)
+        pending.pop(0)
+        send_message(chat_id, f"✅ Publicado con categoría `{cat_key}`.")
+    elif verb == "override_bando":
+        current["tipo"] = "bando"
+        current["cat"]  = None
+        process_confirmed_item(current, chat_id)
+        pending.pop(0)
+        send_message(chat_id, "✅ Publicado como *bando*.")
+
+    if pending:
+        send_message(chat_id, format_confirmation_message(pending[0]))
+
+
+# ══════════════════════════════════════════════════════════════════════════════
 # Orquestación principal
 # ══════════════════════════════════════════════════════════════════════════════
 
+def get_updates_or_webhook(state: dict) -> list:
+    """Devuelve updates: desde TELEGRAM_UPDATE_JSON (webhook) o getUpdates (manual)."""
+    raw = os.environ.get("TELEGRAM_UPDATE_JSON", "").strip()
+    if raw:
+        return [json.loads(raw)]
+    # Modo manual: solo funciona si el webhook está eliminado
+    try:
+        return get_updates(state["last_update_id"] + 1)
+    except requests.HTTPError as e:
+        if e.response is not None and e.response.status_code == 409:
+            print("ℹ️  Webhook activo — usa el Worker para procesar mensajes. Nada que hacer.")
+            return []
+        raise
+
+
 def main() -> None:
+    import argparse
+    parser = argparse.ArgumentParser(description="Bot de agenda de Enguídanos")
+    parser.add_argument(
+        "--mode", choices=["scan", "confirm"], required=True,
+        help="scan: clasifica eventos nuevos; confirm: procesa respuestas SI/NO",
+    )
+    args = parser.parse_args()
+
     owner_id = os.environ["TELEGRAM_OWNER_ID"]
+    state    = load_json(STATE_FILE, {"last_update_id": 0})
+    pending  = load_json(PENDING_FILE, [])
 
-    state   = load_json(STATE_FILE, {"last_update_id": 0})
-    pending = load_json(PENDING_FILE, [])
-
-    updates = get_updates(state["last_update_id"] + 1)
+    updates = get_updates_or_webhook(state)
 
     for update in updates:
-        state["last_update_id"] = update["update_id"]
-        # Guardar state inmediatamente para no reprocesar este update si el script falla
-        save_json(STATE_FILE, state)
+        update_id = update.get("update_id", 0)
+        if update_id and update_id > state.get("last_update_id", 0):
+            state["last_update_id"] = update_id
+            save_json(STATE_FILE, state)
 
         msg = update.get("message") or update.get("channel_post")
         if not msg:
             continue
 
-        chat_id = msg["chat"]["id"]
-        text    = msg.get("text", "") or msg.get("caption", "") or ""
-
-        # Verificar que el mensaje viene del propietario
         sender_id = (msg.get("from") or {}).get("id")
         if sender_id is None or str(sender_id) != owner_id:
             continue
 
-        # Determinar si es un mensaje reenviado/con media o una respuesta del propietario
-        is_forward = bool(
-            msg.get("forward_from")
-            or msg.get("forward_origin")
-            or msg.get("forward_date")
-            or msg.get("forward_from_chat")
-        )
-        has_media = bool(msg.get("photo") or msg.get("document"))
-        is_new_publication = is_forward or has_media or (not pending and text.strip())
-
-        if is_new_publication:
-            # Clasificar con Gemini
-            image_b64     = None
-            photo_file_id = None
-            pdf_file_id   = None
-
-            if msg.get("photo"):
-                # Tomar la foto de mayor resolución
-                photo_file_id = msg["photo"][-1]["file_id"]
-                raw = download_telegram_file(photo_file_id)
-                webp = image_to_webp(raw)
-                image_b64 = base64.b64encode(webp).decode()
-
-            if msg.get("document"):
-                doc  = msg["document"]
-                mime = doc.get("mime_type", "")
-                if mime == "application/pdf":
-                    pdf_file_id = doc["file_id"]
-
-            try:
-                classified = classify_with_gemini(text, image_b64)
-            except Exception as e:
-                send_message(chat_id, f"⚠️ Error al clasificar con la IA: {e}\nReenvía el mensaje para intentarlo de nuevo.")
-                continue
-
-            today      = datetime.date.today().isoformat()
-            event_date = classified.get("date")
-            item = {
-                "id":                build_id(classified.get("title", "evento"), event_date),
-                "fecha_publicacion": today,
-                "tipo":              classified.get("tipo", "seccion"),
-                "cat":               classified.get("cat"),
-                "title":             classified.get("title", ""),
-                "desc":              classified.get("desc", ""),
-                "date":              event_date,
-                "when":              classified.get("when"),
-                "place":             classified.get("place"),
-                "_photo_file_id":    photo_file_id,
-                "_pdf_file_id":      pdf_file_id,
-            }
-
-            was_empty = len(pending) == 0
-            pending.append(item)
-
-            if was_empty:
-                send_message(chat_id, format_confirmation_message(item))
-            else:
-                pos = len(pending)
-                send_message(chat_id, f"Añadido a la cola (posición {pos})")
-
+        if args.mode == "scan":
+            _process_scan(msg, pending)
         else:
-            # Tratar como respuesta del propietario
-            if not pending:
-                send_message(chat_id, "No hay eventos pendientes en la cola.")
-                continue
-
-            action  = parse_reply(text)
-            current = pending[0]
-
-            if action is None:
-                send_message(
-                    chat_id,
-                    "No entendí la respuesta. Usa: *SI*, *NO*, *BANDO*, o una categoría "
-                    "(FIESTAS, CULTURA, NATURALEZA, GASTRONOMIA, FORMACION, SERVICIOS).",
-                )
-                continue
-
-            verb, cat_key = action
-
-            if verb == "yes":
-                process_confirmed_item(current, chat_id)
-                pending.pop(0)
-                send_message(chat_id, "✅ Publicado.")
-
-            elif verb == "no":
-                pending.pop(0)
-                send_message(chat_id, "❌ Descartado.")
-
-            elif verb == "override":
-                current["cat"]  = cat_key
-                current["tipo"] = "seccion"
-                process_confirmed_item(current, chat_id)
-                pending.pop(0)
-                send_message(chat_id, f"✅ Publicado con categoría `{cat_key}`.")
-
-            elif verb == "override_bando":
-                current["tipo"] = "bando"
-                current["cat"]  = None
-                process_confirmed_item(current, chat_id)
-                pending.pop(0)
-                send_message(chat_id, "✅ Publicado como *bando*.")
-
-            # Si quedan eventos en la cola, enviar el siguiente para revisión
-            if pending:
-                send_message(chat_id, format_confirmation_message(pending[0]))
+            _process_confirm(msg, pending)
 
     save_json(STATE_FILE, state)
     save_json(PENDING_FILE, pending)

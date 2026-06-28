@@ -20,7 +20,7 @@ if hasattr(sys.stderr, "reconfigure"):
 # Añadir el directorio scripts al path para importar sin env vars
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from procesar_telegram import slugify, build_id, parse_reply, strip_json_fences
+from procesar_telegram import slugify, build_id, parse_reply, strip_json_fences, is_new_event
 
 
 _failures = []
@@ -118,6 +118,31 @@ test(
     strip_json_fences('  ```json\n{"a": 1}\n```  '),
     '{"a": 1}',
 )
+
+# ── is_new_event ───────────────────────────────────────────────────────────────
+print("── is_new_event ──────────────────────────────────────────────────────────")
+
+test("foto es evento nuevo",
+    is_new_event({"photo": [{"file_id": "abc"}], "chat": {"id": 1}}, []),
+    True)
+test("foto con caption es siempre evento nuevo",
+    is_new_event({"photo": [{"file_id": "abc"}], "caption": "concierto", "chat": {"id": 1}}, [{"id": "x"}]),
+    True)
+test("documento es evento nuevo",
+    is_new_event({"document": {"file_id": "abc"}, "chat": {"id": 1}}, []),
+    True)
+test("texto SI con pendiente no es evento nuevo",
+    is_new_event({"text": "SI", "chat": {"id": 1}}, [{"id": "x"}]),
+    False)
+test("texto libre sin pendiente es evento nuevo",
+    is_new_event({"text": "Verbena el sabado en la plaza", "chat": {"id": 1}}, []),
+    True)
+test("texto libre con pendiente no es evento nuevo",
+    is_new_event({"text": "algo cualquiera", "chat": {"id": 1}}, [{"id": "x"}]),
+    False)
+test("mensaje reenviado es siempre evento nuevo",
+    is_new_event({"text": "SI", "forward_origin": {"date": 123}, "chat": {"id": 1}}, [{"id": "x"}]),
+    True)
 
 # ── Resultado final ────────────────────────────────────────────────────────────
 print()
