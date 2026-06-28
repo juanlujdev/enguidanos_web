@@ -427,8 +427,15 @@ def _process_scan(msg: dict, pending: list) -> None:
 
 def _process_confirm(msg: dict, pending: list) -> None:
     """Modo confirm: procesa respuesta del propietario (SI/NO/categoría)."""
-    if is_new_event(msg, pending):
-        return  # en modo confirm, ignorar fotos/texto libre
+    has_media = bool(msg.get("photo") or msg.get("document"))
+    is_forward = bool(
+        msg.get("forward_from")
+        or msg.get("forward_origin")
+        or msg.get("forward_date")
+        or msg.get("forward_from_chat")
+    )
+    if has_media or is_forward:
+        return
 
     text    = msg.get("text", "") or msg.get("caption", "") or ""
     chat_id = msg["chat"]["id"]
