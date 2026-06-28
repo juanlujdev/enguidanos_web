@@ -47,6 +47,7 @@ export default {
             'Accept': 'application/vnd.github+json',
             'X-GitHub-Api-Version': '2022-11-28',
             'Content-Type': 'application/json',
+            'User-Agent': 'enguidanos-telegram-bot/1.0',
           },
           body: JSON.stringify({
             ref: 'main',
