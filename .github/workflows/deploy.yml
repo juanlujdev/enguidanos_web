@@ -4,7 +4,9 @@ on:
   push:
     branches: [main]
   workflow_run:
-    workflows: ["Procesar agenda desde Telegram"]
+    workflows:
+      - "Procesar agenda desde Telegram (scan)"
+      - "Confirmar evento desde Telegram"
     types: [completed]
     branches: [main]
 

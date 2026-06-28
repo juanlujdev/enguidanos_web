@@ -1,0 +1,55 @@
+name: Procesar agenda desde Telegram (scan)
+
+on:
+  workflow_dispatch:
+    inputs:
+      update_json:
+        description: 'JSON del update de Telegram (lo pasa el Cloudflare Worker)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: agenda-scan
+  cancel-in-progress: false
+
+jobs:
+  procesar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependencias
+        run: pip install requests Pillow
+
+      - name: Ejecutar tests de funciones puras
+        run: python scripts/test_script.py
+
+      - name: Procesar mensajes de Telegram (scan)
+        run: python scripts/procesar_telegram.py --mode scan
+        env:
+          TELEGRAM_BOT_TOKEN:    ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_OWNER_ID:     ${{ secrets.TELEGRAM_OWNER_ID }}
+          OPENROUTER_API_KEY:    ${{ secrets.OPENROUTER_API_KEY }}
+          TELEGRAM_UPDATE_JSON:  ${{ github.event.inputs.update_json }}
+
+      - name: Commit y push si hay cambios
+        run: |
+          git config user.email "agenda-bot@enguidanos.es"
+          git config user.name "Agenda Bot"
+          git add public/data/eventos.json public/carteles/ scripts/state.json scripts/pending.json
+          if git diff --cached --quiet; then
+            echo "Sin cambios nuevos — nada que commitear"
+          else
+            git commit -m "bot: actualización de agenda desde Telegram"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
