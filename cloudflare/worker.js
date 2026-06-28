@@ -23,7 +23,7 @@ export default {
     const body = await request.json().catch(() => null);
     if (!body) return new Response('ok');
 
-    const msg = body.message || body.channel_post;
+    const msg = body.message;
     if (!msg) return new Response('ok');
 
     // 3. Validar propietario (doble validación; el script Python también lo hace)
