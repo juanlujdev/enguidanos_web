@@ -127,8 +127,35 @@ def strip_json_fences(raw: str) -> str:
     pattern = r"^```(?:json)?\s*\n?(.*?)\n?```$"
     match = re.match(pattern, stripped, re.DOTALL)
     if match:
-        return match.group(1).strip()
-    return raw
+        stripped = match.group(1).strip()
+    # Extraer solo el objeto JSON si el modelo añade texto antes/después
+    start = stripped.find('{')
+    end = stripped.rfind('}')
+    if start != -1 and end != -1:
+        stripped = stripped[start:end + 1]
+    return stripped
+
+
+def _repair_json_newlines(s: str) -> str:
+    """Escapa saltos de línea literales dentro de strings JSON (error común en modelos free)."""
+    result = []
+    in_string = False
+    escape_next = False
+    for char in s:
+        if escape_next:
+            result.append(char)
+            escape_next = False
+        elif char == '\\' and in_string:
+            result.append(char)
+            escape_next = True
+        elif char == '"':
+            result.append(char)
+            in_string = not in_string
+        elif char == '\n' and in_string:
+            result.append('\\n')
+        else:
+            result.append(char)
+    return ''.join(result)
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -273,7 +300,10 @@ def classify_with_gemini(text: str, image_b64: str | None = None) -> dict:
     raw = resp.json()["choices"][0]["message"]["content"]
     raw = raw.replace("<pad>", "")  # ponytail: artefacto de tokenización de Gemma
     clean = strip_json_fences(raw)
-    return json.loads(clean)
+    try:
+        return json.loads(clean)
+    except json.JSONDecodeError:
+        return json.loads(_repair_json_newlines(clean))
 
 
 # ══════════════════════════════════════════════════════════════════════════════
