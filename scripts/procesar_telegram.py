@@ -263,6 +263,11 @@ gastro=gastronomía, form=formación, servicio=servicios municipales.
 tipo=bando para bandos municipales/avisos oficiales; tipo=seccion para el resto."""
 
 
+def clean_model_artifacts(text: str) -> str:
+    """Elimina artefactos de tokenización de modelos free (Gemma 4, etc.)."""
+    return text.replace("<pad>", "").replace("톱", " ")
+
+
 def classify_with_gemini(text: str, image_b64: str | None = None) -> dict:
     """Llama a la IA (vía OpenRouter) para clasificar un mensaje reenviado. Devuelve dict."""
     api_key = os.environ["OPENROUTER_API_KEY"]
@@ -298,7 +303,7 @@ def classify_with_gemini(text: str, image_b64: str | None = None) -> dict:
     )
     resp.raise_for_status()
     raw = resp.json()["choices"][0]["message"]["content"]
-    raw = raw.replace("<pad>", "")  # ponytail: artefacto de tokenización de Gemma
+    raw = clean_model_artifacts(raw)
     clean = strip_json_fences(raw)
     try:
         return json.loads(clean)

@@ -20,7 +20,7 @@ if hasattr(sys.stderr, "reconfigure"):
 # Añadir el directorio scripts al path para importar sin env vars
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from procesar_telegram import slugify, build_id, parse_reply, strip_json_fences, is_new_event
+from procesar_telegram import slugify, build_id, parse_reply, strip_json_fences, is_new_event, clean_model_artifacts
 
 
 _failures = []
@@ -143,6 +143,39 @@ test("texto libre con pendiente no es evento nuevo",
 test("mensaje reenviado es siempre evento nuevo",
     is_new_event({"text": "SI", "forward_origin": {"date": 123}, "chat": {"id": 1}}, [{"id": "x"}]),
     True)
+
+# ── clean_model_artifacts (artefactos Gemma 4) ────────────────────────────────
+print("── clean_model_artifacts (artefactos Gemma 4) ───────────────────────")
+
+test(
+    "톱 sustituido por espacio",
+    clean_model_artifacts("propietarios톱de톱solares"),
+    "propietarios de solares",
+)
+test(
+    "<pad> eliminado",
+    clean_model_artifacts("texto<pad>limpio"),
+    "textolimpio",
+)
+test(
+    "ambos artefactos combinados",
+    clean_model_artifacts("<pad>hola톱mundo"),
+    "hola mundo",
+)
+test(
+    "string limpio no cambia",
+    clean_model_artifacts('{"title": "Bando"}'),
+    '{"title": "Bando"}',
+)
+
+import json as _json
+_raw_gemma = '{"title": "Aviso", "desc": "Aviso톱a톱los톱propietarios"}'
+_parsed = _json.loads(clean_model_artifacts(_raw_gemma))
+test(
+    "JSON con 톱 parsea correctamente tras limpiar",
+    _parsed["desc"],
+    "Aviso a los propietarios",
+)
 
 # ── Resultado final ────────────────────────────────────────────────────────────
 print()
