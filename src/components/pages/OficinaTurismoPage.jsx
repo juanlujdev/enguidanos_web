@@ -64,7 +64,7 @@ function OficinaTurismoPage({ navTarget }) {
   ];
   return (
     <main>
-      <PageHeroMedia placeholder="Foto · Oficina de Turismo (Calle Virgen, 3)">
+      <PageHeroMedia img="assets/oficina-turismo.webp" alt="Oficina de Turismo de Enguídanos">
         <div className="breadcrumb"><span>Inicio</span> · Turismo · Oficina de Turismo</div>
         <h1 className="reveal in">Oficina de<br/><em>Turismo</em></h1>
         <p className="reveal in reveal-delay-1">Tu punto de partida para descubrir Enguídanos: información, visitas guiadas, mapas, folletos de senderos y publicaciones sobre el municipio y el Valle del Cabriel.</p>
@@ -74,7 +74,7 @@ function OficinaTurismoPage({ navTarget }) {
         <div className="container">
           <div className="ofi-intro">
             <div className="ofi-photo reveal">
-              <img src="assets/oficina-turismo.webp" alt="Interior de la Oficina de Turismo de Enguídanos" loading="lazy" />
+              <img src="assets/oficina-turismo-interior.webp" alt="Interior de la Oficina de Turismo de Enguídanos" loading="lazy" />
             </div>
             <div className="ofi-info reveal">
               <div className="eyebrow" style={{marginBottom:20}}>Información práctica</div>

@@ -4,22 +4,22 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Cómo ejecutar el proyecto
 
-No hay bundler ni proceso de build. Abrir `Enguidanos Rediseno.html` directamente en el navegador:
+El proyecto usa **Vite** como bundler. El punto de entrada es `index.html` + `src/main.jsx`.
 
 ```powershell
-# Windows — abrir en el navegador predeterminado
-Start-Process "Enguidanos Rediseno.html"
+# Desarrollo con hot-reload (ÚNICO comando correcto — NO usar npx serve .)
+npx vite
+
+# Build de producción → genera dist/
+npx vite build
+
+# Preview del build de producción
+npx vite preview
 ```
 
-Para desarrollo con recarga automática, usar un servidor local (evita restricciones CORS de `file://`):
+> ⚠️ `npx serve .` y `python -m http.server` NO funcionan: el navegador rechaza archivos `.jsx` servidos con MIME type `text/jsx`. Solo `npx vite` transpila JSX correctamente.
 
-```powershell
-# Python (si disponible)
-python -m http.server 8080
-
-# Node.js (si disponible)
-npx serve .
-```
+El archivo `Enguidanos Rediseno.html` es la versión antigua CDN (Babel standalone). Ya no es la versión activa.
 
 No hay linter, tests, ni dependencias de Node. Todo se carga desde CDN (unpkg, Google Fonts).
 

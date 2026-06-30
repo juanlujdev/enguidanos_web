@@ -4,7 +4,7 @@ import Icon from './Icon.jsx'
 import { useEventos } from '../../hooks/useEventos.js'
 
 const BANDO_COLOR = "#5a6b78"
-const ESCUDO = "assets/escudo-enguidanos.webp"
+const LOGO_CASTILLO = "assets/logo-enguidanos.webp"
 const MES = ["ENE","FEB","MAR","ABR","MAY","JUN","JUL","AGO","SEP","OCT","NOV","DIC"]
 const MESES_LARGO = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"]
 
@@ -74,7 +74,7 @@ function NewsModal({ items, index, setIndex }) {
       </>}
       <div className="agenda-modal-inner" onClick={e => e.stopPropagation()}>
         <div className="agenda-modal-poster">
-          <img src={ev.poster || ESCUDO} alt={`Cartel · ${ev.title}`} />
+          <img src={ev.poster || LOGO_CASTILLO} alt={`Cartel · ${ev.title}`} />
         </div>
         <div className="agenda-modal-info">
           <span className="agenda-modal-tipo">
@@ -102,11 +102,7 @@ function News({ setPage }) {
   const eventos = useEventos()
   const [openItem, setOpenItem] = useState(null)
 
-  const items = eventos
-    ? [...eventos]
-        .sort((a, b) => (b.fecha_publicacion || "").localeCompare(a.fecha_publicacion || ""))
-        .slice(0, 3)
-    : null
+  const items = eventos ? eventos.slice(0, 3) : null
 
   return (
     <section className="section" style={{background:"var(--bg-2)"}}>
@@ -127,7 +123,7 @@ function News({ setPage }) {
                 const cat = AGENDA_CATS[n.cat]
                 const color = cat?.color || BANDO_COLOR
                 const tag = n.tipo === "bando" ? "BANDO" : (cat?.label || "").toUpperCase()
-                const img = n.poster || ESCUDO
+                const img = n.poster || LOGO_CASTILLO
                 const isBando = n.tipo === "bando"
 
                 let excerpt, showVerMas
