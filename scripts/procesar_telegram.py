@@ -251,7 +251,8 @@ _GEMINI_SYSTEM_PROMPT = """Eres un asistente que extrae datos de publicaciones d
 Devuelve SIEMPRE JSON válido (sin bloques de código) con este esquema exacto:
 {
   "title": "Título del evento",
-  "desc": "Descripción breve (1-2 frases)",
+  "desc": "Descripción completa con todos los detalles relevantes del evento",
+  "desc_short": "Resumen del evento en máximo 15 palabras",
   "date": "YYYY-MM-DD o null si no se conoce",
   "when": "Texto legible de hora/día o null",
   "place": "Lugar o null",
@@ -367,6 +368,7 @@ def process_confirmed_item(item: dict, chat_id) -> None:
         "cat":               item.get("cat"),
         "title":             item.get("title"),
         "desc":              item.get("desc"),
+        "desc_short":        item.get("desc_short"),
         "date":              item.get("date"),
         "when":              item.get("when"),
         "place":             item.get("place"),
@@ -374,6 +376,7 @@ def process_confirmed_item(item: dict, chat_id) -> None:
         "pdf":               pdf_path,
         "subtipo":           None,
         "fuente":            "telegram",
+        "original_text":     item.get("original_text"),
     }
 
     # Deduplicación e inserción al principio de eventos.json
@@ -443,9 +446,11 @@ def _process_scan(msg: dict, pending: list) -> None:
         "cat":               classified.get("cat"),
         "title":             classified.get("title", ""),
         "desc":              classified.get("desc", ""),
+        "desc_short":        classified.get("desc_short"),
         "date":              event_date,
         "when":              classified.get("when"),
         "place":             classified.get("place"),
+        "original_text":     text or None,
         "_photo_file_id":    photo_file_id,
         "_pdf_file_id":      pdf_file_id,
     }
