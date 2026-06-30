@@ -178,7 +178,7 @@ function AgendaPage() {
                       </div>
                       <div>
                         <div className="event-title">{ev.title}</div>
-                        <div style={{fontSize:13, color:"var(--ink-3)", marginTop:6, maxWidth:360}}>{ev.multi && ev.items.length ? ev.items.join(" · ") : ev.desc}</div>
+                        <div style={{fontSize:13, color:"var(--ink-3)", marginTop:6, maxWidth:360}}>{ev.multi && ev.items.length ? ev.items.join(" · ") : (ev.desc_short || ev.desc)}</div>
                       </div>
                       <div className="event-meta">{ev.when}</div>
                       <div>
