@@ -73,8 +73,10 @@ function NewsModal({ items, index, setIndex }) {
         <button className="agenda-modal-arrow next" onClick={(e) => { e.stopPropagation(); setIndex((index + 1) % items.length) }} aria-label="Siguiente">›</button>
       </>}
       <div className="agenda-modal-inner" onClick={e => e.stopPropagation()}>
-        <div className="agenda-modal-poster">
-          <img src={ev.poster || LOGO_CASTILLO} alt={`Cartel · ${ev.title}`} />
+        <div className="agenda-modal-poster"
+          style={!ev.poster ? {background:"#fff"} : undefined}>
+          <img src={ev.poster || LOGO_CASTILLO} alt={`Cartel · ${ev.title}`}
+            style={!ev.poster ? {maxHeight:"70%",maxWidth:"80%",objectFit:"contain",boxShadow:"none"} : undefined} />
         </div>
         <div className="agenda-modal-info">
           <span className="agenda-modal-tipo">

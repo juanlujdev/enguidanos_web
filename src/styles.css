@@ -3000,8 +3000,10 @@ a.resto-contact-item:hover { color: var(--terracota); }
 .agenda-modal-inner {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 380px;
+  grid-template-rows: minmax(0, 1fr);
   gap: 0;
   width: min(1040px, 100%);
+  height: min(88vh, fit-content);
   max-height: 88vh;
   background: var(--bg);
   border-radius: var(--r-lg);
@@ -3030,6 +3032,7 @@ a.resto-contact-item:hover { color: var(--terracota); }
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+  min-height: 0;
 }
 .agenda-modal-tipo {
   display: inline-flex;
