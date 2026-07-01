@@ -13,7 +13,7 @@
   },
   {
     "id": "centro-celtiberia", "cat": "arqueologia",
-    "title": "Futuro Centro de Interpretación", "titleEm": "de la Celtiberia",
+    "title": "Casa", "titleEm": "Celtíbera",
     "img": "assets/patrimonio/opt/centro-celtiberia.webp",
     "excerpt": "Recreación de una casa y una necrópolis celtíberas junto al Castillo, visitable con cita previa.",
     "desc": [
@@ -177,6 +177,16 @@
     ]
   },
   {
+    "id": "mirador-chorreras", "cat": "miradores",
+    "title": "Mirador", "titleEm": "de las Chorreras",
+    "img": "assets/chorreras.webp",
+    "excerpt": "Vistas sobre el paraje de Las Chorreras, con sus cascadas y aguas de color turquesa.",
+    "desc": [
+      "Mirador asomado al paraje de Las Chorreras del Cabriel, donde el río ha excavado la roca caliza formando cascadas, balsas y saltos de agua de color turquesa.",
+      "Uno de los rincones más fotografiados del municipio, dentro de la Reserva de la Biosfera."
+    ]
+  },
+  {
     "id": "molino-golpecillo", "cat": "industrial",
     "title": "Molino de", "titleEm": "«El Golpecillo»",
     "img": "assets/patrimonio/opt/molino-golpecillo-foto.webp",
@@ -205,48 +215,6 @@
     "desc": [
       "Antigua represa abandonada sobre el río Cabriel que conserva bastante bien la obra de ingeniería propia de este tipo de construcción hidráulica.",
       "En su salida de agua provoca un pequeño ensanche que, en su orilla sur, forma una pequeña playa donde toman el baño quienes hasta allí llegan."
-    ]
-  },
-  {
-    "id": "escudo-puerta", "cat": "heraldica",
-    "title": "Escudo de Armas", "titleEm": "y puerta",
-    "img": "assets/patrimonio/opt/escudo-puerta.webp",
-    "excerpt": "Escudo nobiliario en la clave de un arco de medio punto de piedra sillar.",
-    "desc": [
-      "Otro de los escudos nobiliarios de la villa. El escudo se encuentra en la portada, con arco de medio punto de piedra sillar, sobre la clave.",
-      "Falta el tejadillo de protección y urge la limpieza y rehabilitación de toda la fachada."
-    ]
-  },
-  {
-    "id": "escudo-larga", "cat": "heraldica",
-    "title": "Escudo de Armas", "titleEm": "de la calle Larga",
-    "img": "assets/patrimonio/opt/escudo-larga-v2.webp",
-    "excerpt": "Escudo de la calle Larga con la inscripción «AÑO 1659».",
-    "desc": [
-      "Escudo de armas situado en la calle Larga, único vestigio noble que queda en la casa. Debajo del escudo se lee la inscripción del año de construcción: «AÑO 1659».",
-      "En la casa contigua se descubre otro escudo, este más moderno, con decoración de un pájaro y la fecha de 1857. Estos dos escudos, junto al de la cercana calle Espada, son los únicos que quedan en el pueblo. Se desconoce a qué familias pertenecieron."
-    ],
-    "meta": [{ "k": "Inscripción", "v": "AÑO 1659" }]
-  },
-  {
-    "id": "casa-senorial", "cat": "monumentos",
-    "title": "Casa Señorial", "titleEm": "del siglo XIX",
-    "img": "assets/patrimonio/opt/casa-senorial.webp",
-    "excerpt": "Casa de construcción tradicional con balcón de madera y arco de piedra sillar.",
-    "desc": [
-      "Casa señorial de construcción tradicional, con dos alturas y un balcón de madera en el patio exterior que se abre a la calle mediante un arco de piedra sillar de bella factura. El conjunto de puerta, balcón y ventanas guarda una simetría interesante.",
-      "La portada es adintelada y sobre ella reposa un balcón con barandilla de hierro forjado. La puerta es de madera labrada, imitando dos columnas a modo de pilastras, con un medallón central con las iniciales de los antiguos dueños. A su derecha destaca la reja castellana que cubre la ventana.",
-      "En su interior conserva todavía las enormes vigas de madera de su estructura y parte de la solería de ladrillo abizcochado. La casa es muy grande y cuenta con patio, corral y antigua bodega."
-    ]
-  },
-  {
-    "id": "casa-curato", "cat": "monumentos",
-    "title": "Casa", "titleEm": "Curato",
-    "img": "assets/patrimonio/opt/casa-curato.webp",
-    "excerpt": "Antigua casa curato con arco de medio punto y escudo religioso sobre la clave.",
-    "desc": [
-      "Antigua casa que, por su escudo, estuvo destinada a casa curato. Tiene puerta con arco de medio punto en piedra sillar que arranca desde dos cornisas fajadas y, sobre la clave, un escudo religioso con cruz.",
-      "Está descuidada, cubierta de cal y alterada en sus vanos originarios."
     ]
   }
 ]

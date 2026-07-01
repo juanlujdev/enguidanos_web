@@ -79,5 +79,37 @@
       "assets/alojamientos/rincon-piedra-terraza.webp",
       "assets/alojamientos/rincon-piedra-salon.webp"
     ]
+  },
+  {
+    "id": "abuelo-lorenzo",
+    "name": "Casa Rural Abuelo Lorenzo",
+    "tipo": "Casa rural · Vistas a la ciudad",
+    "desc": "Casa rural con WiFi gratis, aire acondicionado y vistas al pueblo en pleno Enguídanos. Consta de 2 dormitorios, una sala de estar y una cocina totalmente equipada con nevera, pensada para desconectar sin renunciar a ninguna comodidad. Se entrega con toallas y ropa de cama incluidas, lista para entrar a disfrutar.",
+    "extra": "Cuenta con 2 baños con ducha y secador de pelo, y la propia casa ofrece servicio de alquiler de bicicletas para descubrir la zona practicando senderismo o pesca por los alrededores.",
+    "features": ["WiFi gratis", "Vistas a la ciudad", "Aire acondicionado", "2 dormitorios", "Alquiler de bicicletas"],
+    "address": "C. San Blas, 25, 2-1, 16372 Enguídanos, Cuenca",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Calle+San+Blas+25+Engu%C3%ADdanos+Cuenca",
+    "phones": ["661 53 02 01"],
+    "fotos": [
+      "assets/alojamientos/abuelo-lorenzo-fachada.webp",
+      "assets/alojamientos/abuelo-lorenzo-habitacion.webp",
+      "assets/alojamientos/abuelo-lorenzo-cocina.webp"
+    ]
+  },
+  {
+    "id": "valle-del-cabriel",
+    "name": "Casa Rural Valle del Cabriel",
+    "tipo": "Casa rural · Terraza con vistas",
+    "desc": "Casa rural en pleno Enguídanos con terraza y cocina propia, ideal para una escapada tranquila en la serranía. Cada unidad está totalmente equipada con lavadora, TV, sofá y armario, y desde la terraza se disfrutan las vistas al pueblo y a las montañas que lo rodean.",
+    "extra": "La casa rural dispone de barbacoa, perfecta para una comida al aire libre entre visita y visita.",
+    "features": ["Terraza con vistas", "Cocina equipada", "Lavadora", "Barbacoa"],
+    "address": "C. Tendedor, 12, 16372 Enguídanos, Cuenca",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Calle+Tendedor+12+Engu%C3%ADdanos+Cuenca",
+    "phones": ["961 13 33 04"],
+    "fotos": [
+      "assets/alojamientos/valle-cabriel-fachada.webp",
+      "assets/alojamientos/valle-cabriel-terraza.webp",
+      "assets/alojamientos/valle-cabriel-salon.webp"
+    ]
   }
 ]
