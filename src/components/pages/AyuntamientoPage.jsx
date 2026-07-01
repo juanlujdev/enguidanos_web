@@ -115,8 +115,60 @@ function PlenosView({ data }) {
   );
 }
 
+// Modal a pantalla completa con la imagen del bando (o el escudo de Enguídanos
+// si no tiene) + el texto original de la publicación.
+function BandoModal({ items, index, setIndex }) {
+  useEffect(() => {
+    if (index === null) return;
+    const onKey = (e) => {
+      if (e.key === "Escape") setIndex(null);
+      else if (e.key === "ArrowRight") setIndex((index + 1) % items.length);
+      else if (e.key === "ArrowLeft") setIndex((index - 1 + items.length) % items.length);
+    };
+    window.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => { window.removeEventListener("keydown", onKey); document.body.style.overflow = ""; };
+  }, [index, items.length, setIndex]);
+
+  if (index === null) return null;
+  const b = items[index];
+
+  return (
+    <div className="agenda-modal" onClick={() => setIndex(null)}>
+      <button className="agenda-modal-close" onClick={() => setIndex(null)} aria-label="Cerrar">×</button>
+      <div className="agenda-modal-counter">{String(index + 1).padStart(2,"0")} / {String(items.length).padStart(2,"0")}</div>
+      <button className="agenda-modal-arrow prev" onClick={(e) => { e.stopPropagation(); setIndex((index - 1 + items.length) % items.length); }} aria-label="Anterior">‹</button>
+      <button className="agenda-modal-arrow next" onClick={(e) => { e.stopPropagation(); setIndex((index + 1) % items.length); }} aria-label="Siguiente">›</button>
+      <div className="agenda-modal-inner" onClick={e => e.stopPropagation()}>
+        <div className="agenda-modal-poster">
+          <img src={b.poster || "assets/escudo-enguidanos.webp"} alt={`Bando · ${b.title}`} />
+        </div>
+        <div className="agenda-modal-info">
+          <span className="agenda-modal-tipo"><span className="swatch" style={{background:"var(--terracota)"}}></span>Bando</span>
+          <h3 className="serif">{b.title}</h3>
+          {b.fecha_publicacion && <div className="agenda-modal-daylabel">{b.fecha_publicacion}</div>}
+          <p className="agenda-modal-desc" style={{whiteSpace:"pre-line"}}>{b.original_text || b.desc}</p>
+          {b.place && (
+            <div className="agenda-modal-meta">
+              <div className="agenda-modal-row"><span className="label">Dónde</span><span className="value">{b.place}</span></div>
+            </div>
+          )}
+          {b.pdf && (
+            <a className="agenda-modal-dl" href={b.pdf}
+              download={b.title.replace(/[^\w]+/g,"-").slice(0,60)+".pdf"}
+              onClick={(e) => downloadPdf(e, b.pdf, b.title.slice(0,60))}>
+              Descargar bando oficial ↓
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function BandosView() {
   const eventos = useEventos()
+  const [openB, setOpenB] = useState(null);
   const bandos = eventos
     ? [...eventos]
         .filter(e => e.tipo === "bando")
@@ -136,7 +188,7 @@ function BandosView() {
   return (
     <div className="bandos">
       {bandos.map((b, i) => (
-        <article key={b.id || i} className="bando reveal" style={{transitionDelay:`${i*0.05}s`}}>
+        <article key={b.id || i} className="bando reveal" style={{transitionDelay:`${i*0.05}s`, cursor:"pointer"}} onClick={() => setOpenB(i)}>
           <div style={{display:"flex",gap:24,alignItems:"flex-start"}}>
             <img
               src={b.poster || "assets/escudo-enguidanos.webp"}
@@ -154,7 +206,7 @@ function BandosView() {
               {b.pdf && (
                 <a className="bando-pdf" href={b.pdf}
                   download={b.title.replace(/[^\w]+/g,"-").slice(0,60)+".pdf"}
-                  onClick={(e) => downloadPdf(e, b.pdf, b.title.slice(0,60))}>
+                  onClick={(e) => { e.stopPropagation(); downloadPdf(e, b.pdf, b.title.slice(0,60)); }}>
                   Descargar bando oficial <span className="mono">PDF&nbsp;↓</span>
                 </a>
               )}
@@ -162,7 +214,8 @@ function BandosView() {
           </div>
         </article>
       ))}
-      <p className="ord-note">Bandos y comunicaciones oficiales de la Alcaldía de Enguídanos. Recopilación no oficial; fuente: <a href="https://www.facebook.com/AyuntamientodeEnguidanos/?locale=es_ES" target="_blank" rel="noopener noreferrer">Facebook oficial del Ayuntamiento</a>.</p>
+      <p className="ord-note">Bandos y comunicaciones oficiales de la Alcaldía de Enguídanos. Recopilación no oficial; fuente: <a href="https://www.facebook.com/AyuntamientodeEnguidanos/?locale=es_ES" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>Facebook oficial del Ayuntamiento</a>.</p>
+      <BandoModal items={bandos} index={openB} setIndex={setOpenB} />
     </div>
   )
 }
