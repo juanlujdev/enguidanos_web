@@ -1,5 +1,22 @@
 [
   {
+    "id": "bando-municipal-hallazgo-de-llaves",
+    "fecha_publicacion": "2026-07-01",
+    "tipo": "bando",
+    "cat": "servicio",
+    "title": "Bando Municipal: Hallazgo de llaves",
+    "desc": "Se informa a la ciudadanía de que se han encontrado las llaves que aparecen en la imagen junto al río. Las personas propietarias pueden pasar a recogerlas por el Ayuntamiento.",
+    "desc_short": "Se han encontrado unas llaves junto al río; recoger en el Ayuntamiento.",
+    "date": null,
+    "when": null,
+    "place": "Ayuntamiento",
+    "poster": "carteles/bando-municipal-hallazgo-de-llaves.webp",
+    "pdf": null,
+    "subtipo": null,
+    "fuente": "telegram",
+    "original_text": "📢📢**BANDO MUNICIPAL**\n\nSe informa a la ciudadanía de que se han encontrado las llaves que aparecen en la imagen junto al río.\n\nLas personas propietarias pueden pasar a recogerlas por el Ayuntamiento."
+  },
+  {
     "id": "fiestas-de-las-penas-20260808",
     "fecha_publicacion": "2026-07-01",
     "tipo": "seccion",
